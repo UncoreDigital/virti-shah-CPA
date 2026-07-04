@@ -6,46 +6,47 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 213 54% 15%;
+    --foreground: 203 42% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 213 54% 15%;
+    --card-foreground: 203 42% 18%;
 
-    /* Navy primary */
-    --primary: 213 70% 15%;
+    /* Deep teal primary (logo "VS" — #235675) */
+    --primary: 203 53% 30%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 14% 53%;
+    --secondary: 200 16% 50%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 210 14% 40%;
+    --muted: 197 33% 96%;
+    --muted-foreground: 202 14% 42%;
 
-    /* Gold accent */
-    --accent: 45 70% 55%;
-    --accent-foreground: 213 70% 15%;
+    /* Light blue / teal accent (logo wordmark — #3D8B95) */
+    --accent: 188 44% 47%;
+    --accent-foreground: 203 53% 22%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 45 70% 55%;
+    --border: 200 24% 89%;
+    --input: 200 24% 89%;
+    --ring: 188 44% 47%;
 
     --radius: 0.5rem;
 
-    --navy: 213 70% 15%;
-    --navy-light: 213 54% 25%;
-    --gold: 45 70% 52%;
-    --gold-light: 45 75% 72%;
-    --slate: 210 14% 46%;
-    --slate-light: 210 14% 75%;
+    /* Brand tokens — names kept (navy/gold) but mapped to the teal-blue brand palette */
+    --navy: 203 53% 30%;
+    --navy-light: 201 45% 40%;
+    --gold: 188 44% 47%;
+    --gold-light: 190 46% 70%;
+    --slate: 202 16% 44%;
+    --slate-light: 202 16% 72%;
 
-    --shadow-sm: 0 2px 8px -2px hsl(213 70% 15% / 0.08);
-    --shadow-md: 0 8px 24px -4px hsl(213 70% 15% / 0.12);
-    --shadow-lg: 0 16px 48px -8px hsl(213 70% 15% / 0.16);
-    --shadow-xl: 0 24px 64px -12px hsl(213 70% 15% / 0.2);
-    --shadow-gold: 0 8px 32px -8px hsl(45 70% 52% / 0.4);
+    --shadow-sm: 0 2px 8px -2px hsl(203 53% 30% / 0.08);
+    --shadow-md: 0 8px 24px -4px hsl(203 53% 30% / 0.12);
+    --shadow-lg: 0 16px 48px -8px hsl(203 53% 30% / 0.16);
+    --shadow-xl: 0 24px 64px -12px hsl(203 53% 30% / 0.2);
+    --shadow-gold: 0 8px 32px -8px hsl(188 44% 47% / 0.4);
 
-    --gradient-navy: linear-gradient(135deg, hsl(213 70% 15%) 0%, hsl(213 54% 25%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(45 70% 52%) 0%, hsl(45 75% 72%) 100%);
+    --gradient-navy: linear-gradient(135deg, hsl(203 53% 30%) 0%, hsl(201 45% 40%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(188 48% 54%) 0%, hsl(191 52% 70%) 100%);
   }
 }
 
