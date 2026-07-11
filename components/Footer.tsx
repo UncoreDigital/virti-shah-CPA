@@ -1,7 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin, Clock, Linkedin } from "lucide-react";
-import { navItems, services, site } from "@/lib/site";
+import { site } from "@/lib/site";
+import { auditServices } from "@/lib/firm-data";
+
+const firmLinks = [
+  { name: "About Us", href: "/about" },
+  { name: "Meet the Team & Capacity", href: "/team" },
+  { name: "Security & Compliance", href: "/security" },
+  { name: "Industries", href: "/industries" },
+  { name: "Technology", href: "/software" },
+  { name: "Client Success Stories", href: "/success-stories" },
+  { name: "Contact", href: "/contact" },
+];
 
 export default function Footer() {
   return (
@@ -18,9 +29,9 @@ export default function Footer() {
               className="h-14 w-auto object-contain bg-white rounded-lg p-2 mb-6"
             />
             <p className="text-primary-foreground/60 font-inter text-sm leading-relaxed mb-6">
-              {site.name} provides affordable, reliable and quality outsourced
-              accounting and offshore staffing solutions to US-based CPA, EA and
-              advisory firms.
+              {site.name} provides dedicated offshore audit &amp; assurance
+              professionals who work as an extension of U.S. CPA firms&apos;
+              engagement teams — plus tax and bookkeeping support.
             </p>
             <p className="text-gold font-playfair italic text-sm mb-6">
               &ldquo;{site.tagline}&rdquo;
@@ -35,38 +46,38 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* Quick links */}
+          {/* Audit & Assurance */}
           <div>
             <h4 className="font-playfair text-lg font-semibold text-primary-foreground mb-6">
-              Quick Links
+              Audit &amp; Assurance
             </h4>
             <ul className="space-y-3">
-              {navItems.map((l) => (
-                <li key={l.name}>
+              {auditServices.map((s) => (
+                <li key={s.slug}>
                   <Link
-                    href={l.href}
+                    href={`/services/audit/${s.slug}`}
                     className="text-primary-foreground/60 font-inter text-sm hover:text-gold transition-colors"
                   >
-                    {l.name}
+                    {s.title}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Firm */}
           <div>
             <h4 className="font-playfair text-lg font-semibold text-primary-foreground mb-6">
-              Our Services
+              The Firm
             </h4>
             <ul className="space-y-3">
-              {services.map((s) => (
-                <li key={s.slug}>
+              {firmLinks.map((l) => (
+                <li key={l.name}>
                   <Link
-                    href={`/services/${s.slug}`}
+                    href={l.href}
                     className="text-primary-foreground/60 font-inter text-sm hover:text-gold transition-colors"
                   >
-                    {s.title}
+                    {l.name}
                   </Link>
                 </li>
               ))}

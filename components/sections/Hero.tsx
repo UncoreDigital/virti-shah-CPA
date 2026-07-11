@@ -14,30 +14,30 @@ import {
 const slides = [
   {
     image: "/assets/hero/slide-1.jpg",
-    eyebrow: "Outsourced Accounting & Offshore Staffing",
-    titleLead: "Affordable, Reliable & Quality",
-    titleHighlight: "Outsourced Accounting",
-    titleTail: "Solutions",
+    eyebrow: "Offshore Audit & Assurance for U.S. CPA Firms",
+    titleLead: "Dedicated Offshore",
+    titleHighlight: "Audit & Assurance",
+    titleTail: "Professionals",
     subtitle:
-      "Your go-to partner for bookkeeping, tax preparation and audit support — serving US-based CPA, EA, Tax, Accounting and Advisory firms of all sizes.",
+      "We work as a seamless extension of your engagement teams — scaling your assurance practice through busy season without adding partner overhead or sacrificing quality.",
     objectPosition: "object-[60%_center] md:object-center",
   },
   {
     image: "/assets/hero/slide-2.jpg",
-    eyebrow: "Audit Specialists",
-    titleLead: "Leading service providers for",
-    titleHighlight: "HUD, CIRA, NFP & EBP",
+    eyebrow: "Audit-Specialised Outsourcing",
+    titleLead: "Extend your audit practice for",
+    titleHighlight: "NFP, EBP, HUD & Single",
     titleTail: "Audits",
     subtitle:
-      "An audit is the highest level of assurance — and it demands the same level of quality. We pride ourselves as an audit-specialised outsourcing firm.",
+      "An audit is the highest level of assurance — and it demands the same level of quality. Experienced audit professionals working within your firm's engagement methodology.",
     objectPosition: "object-[70%_center] md:object-center",
   },
 ];
 
 const highlights = [
-  "US CPA-led, multi-level review process",
-  "Latest software & 100% secured operations",
-  "Cost-effective, expert & reliable support",
+  "U.S. CPA-led, multi-level review process",
+  "SOC 2-aligned controls & 100% secured, on-site operations",
+  "Integrated with your audit methodology & file structure",
 ];
 
 export default function Hero() {
@@ -134,10 +134,10 @@ export default function Hero() {
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/services"
+                href="/services/audit"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold border-2 border-white/30 text-white hover:bg-white/10 transition-all"
               >
-                Our Services
+                Audit Services
               </Link>
             </div>
           </div>

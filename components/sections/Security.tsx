@@ -1,4 +1,5 @@
-import { ShieldCheck } from "lucide-react";
+import Link from "next/link";
+import { ShieldCheck, ArrowUpRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import { security } from "@/lib/site";
 
@@ -19,11 +20,18 @@ export default function Security() {
           <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
             Your data, fully protected
           </h2>
-          <p className="font-inter text-primary-foreground/70 leading-relaxed">
-            We operate 100% on-site under strict, audited security controls — so
-            your clients&apos; data stays confidential and compliant at every
-            step.
+          <p className="font-inter text-primary-foreground/70 leading-relaxed mb-6">
+            We operate 100% on-site under strict, audited security controls,
+            aligned with SOC 2 and ISO 27001 practices — so your clients&apos;
+            data stays confidential and compliant at every step.
           </p>
+          <Link
+            href="/security"
+            className="inline-flex items-center gap-2 text-gold font-semibold hover:underline"
+          >
+            See our full security &amp; compliance program
+            <ArrowUpRight className="w-4 h-4" />
+          </Link>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

@@ -30,6 +30,7 @@ export default function Software() {
                 alt={logo.alt}
                 width={140}
                 height={60}
+                unoptimized
                 className="max-h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
               />
             </div>

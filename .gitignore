@@ -31,5 +31,5 @@ next-env.d.ts
 # local tooling
 /.claude
 
-# reference / working material (not part of the app)
-/Anchorbvfs
+
+/docs

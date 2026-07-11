@@ -20,14 +20,39 @@ export type NavItem = {
 
 export const navItems: NavItem[] = [
   { name: "Home", href: "/" },
-  { name: "About Us", href: "/about" },
+  {
+    name: "Audit & Assurance",
+    href: "/services/audit",
+    dropdown: [
+      { name: "Financial Statement Audits", href: "/services/audit/financial-statement-audits" },
+      { name: "Nonprofit Audits", href: "/services/audit/nonprofit-audits" },
+      { name: "Employee Benefit Plan Audits", href: "/services/audit/employee-benefit-plan-audits" },
+      { name: "HUD Audits", href: "/services/audit/hud-audits" },
+      { name: "Single Audits", href: "/services/audit/single-audits" },
+      { name: "Reviews", href: "/services/audit/reviews" },
+      { name: "Compilations", href: "/services/audit/compilations" },
+      { name: "Audit Preparation", href: "/services/audit/audit-preparation" },
+    ],
+  },
+  {
+    name: "Firm",
+    href: "/about",
+    dropdown: [
+      { name: "About Us", href: "/about" },
+      { name: "Meet the Team & Capacity", href: "/team" },
+      { name: "Security & Compliance", href: "/security" },
+      { name: "Industries", href: "/industries" },
+      { name: "Technology", href: "/software" },
+      { name: "Client Success Stories", href: "/success-stories" },
+    ],
+  },
   {
     name: "Services",
     href: "/services",
     dropdown: [
-      { name: "Bookkeeping", href: "/services/bookkeeping" },
+      { name: "Audit & Assurance", href: "/services/audit" },
       { name: "Tax Preparation", href: "/services/tax-preparation" },
-      { name: "Audit", href: "/services/audit" },
+      { name: "Bookkeeping", href: "/services/bookkeeping" },
     ],
   },
   { name: "Contact", href: "/contact" },
