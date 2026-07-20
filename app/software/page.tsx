@@ -9,7 +9,7 @@ import { techStack, type TechTool } from "@/lib/firm-data";
 export const metadata: Metadata = {
   title: "Technology & Software",
   description:
-    "The audit, tax and bookkeeping platforms Virti Shah CPA works in — CaseWare, CCH Axcess, ProSystem fx, UltraTax, Lacerte, Drake, QuickBooks, Xero and secure remote access tooling.",
+    "The tax, bookkeeping, workflow and payroll platforms Virti Shah CPA works in — CCH Axcess, UltraTax, ProConnect, Lacerte, Drake, Karbon, Canopy, TaxDome, QuickBooks, Xero, ADP, Gusto, Bill.com and more.",
 };
 
 // Preserve category order as first seen in the data

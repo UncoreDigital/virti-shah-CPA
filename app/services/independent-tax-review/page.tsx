@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
 import ServiceDetail from "@/components/ServiceDetail";
-import BookkeepingIndustries from "@/components/BookkeepingIndustries";
+import TaxPracticeBlock from "@/components/TaxPracticeBlock";
 import CTA from "@/components/sections/CTA";
 import { serviceDetails } from "@/lib/services-data";
 
-const data = serviceDetails.bookkeeping;
+const data = serviceDetails["independent-tax-review"];
 
 export const metadata: Metadata = {
   title: data.title,
   description: data.metaDescription,
 };
 
-export default function BookkeepingPage() {
+export default function IndependentTaxReviewPage() {
   return (
     <>
       <ServiceDetail data={data}>
-        <BookkeepingIndustries />
+        <TaxPracticeBlock />
       </ServiceDetail>
       <CTA />
     </>

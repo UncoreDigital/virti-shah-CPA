@@ -35,23 +35,70 @@ export const positioning = {
  * ------------------------------------------------------------------------- */
 export type Stat = { value: string; label: string; sub?: string };
 
+// Firm-wide, confirmed trust signals shown in the homepage hero band.
+// (Audit-specific capacity numbers are being supplied separately by the audit team.)
 export const capacityStats: Stat[] = [
-  { value: "25+", label: "Audit & assurance professionals", sub: "TODO: CONFIRM headcount" },
-  { value: "8+", label: "Avg. years of audit experience", sub: "TODO: CONFIRM" },
-  { value: "300+", label: "Audit engagements supported", sub: "TODO: CONFIRM annual/cumulative" },
-  { value: "100%", label: "On-site, secured operations", sub: "No work-from-home" },
+  { value: "100+", label: "Professionals across audit, tax & bookkeeping" },
+  { value: "3", label: "Levels of review before partner sign-off" },
+  { value: "EA & CPA", label: "IRS-licensed & CPA-led engagements" },
+  { value: "100%", label: "On-site, secured operations" },
 ];
 
-// The team-composition / staffing-depth breakdown (Cherry Bekaert wants ratios)
+// Team-composition / staffing-depth breakdown — CONFIRMED firm-wide headcount.
 export const teamComposition = {
-  partners: { count: "2", label: "Partners / Directors" }, // TODO: CONFIRM
-  managers: { count: "4", label: "Audit Managers" }, // TODO: CONFIRM
-  seniors: { count: "8", label: "Senior Auditors" }, // TODO: CONFIRM
-  staff: { count: "12", label: "Audit Staff / Associates" }, // TODO: CONFIRM
-  reviewLevels: "3", // multi-level review depth (staff → senior → manager → partner)
-  seniorManagerRatio: "2:1", // TODO: CONFIRM
-  busySeasonCapacity: "40+", // TODO: CONFIRM concurrent engagements at peak
+  founder: { count: "1", label: "Founder" },
+  managers: { count: "10+", label: "Managers" },
+  seniors: { count: "35+", label: "Seniors / Reviewers" },
+  staff: { count: "60+", label: "Staff / Associates" },
+  total: "100+",
+  reviewLevels: "3", // Preparer → Senior Reviewer → Manager → Client CPA/Partner sign-off
   cpaLed: true,
+};
+
+/* ---------------------------------------------------------------------------
+ *  TAX & BOOKKEEPING PRACTICE — CONFIRMED data (provided by the tax team)
+ * ------------------------------------------------------------------------- */
+export const taxBookkeeping = {
+  stats: [
+    { value: "2,000+", label: "Tax returns prepared each season" },
+    { value: "500+", label: "Returns independently reviewed / year" },
+    { value: "300+", label: "Monthly bookkeeping clients" },
+    { value: "EA-led", label: "IRS-licensed Enrolled Agents" },
+  ] as Stat[],
+  // Multi-level tax review workflow (the "3 Levels of Review" story is accurate here)
+  reviewWorkflow: [
+    "Preparer",
+    "Senior Reviewer",
+    "Tax Manager",
+    "Client CPA / Partner Sign-off",
+  ],
+  taxServices: [
+    "Tax Preparation",
+    "Independent Tax Review",
+    "Tax Planning",
+    "IRS & State Notice Responses",
+    "Tax Advisory",
+  ],
+  accountingServices: [
+    "Bookkeeping & Month-End Close",
+    "Client Accounting Services (CAS)",
+    "Payroll",
+    "Sales Tax Compliance",
+  ],
+  entityForms: [
+    "Individual — Form 1040",
+    "Partnership — Form 1065",
+    "S-Corp — Form 1120-S",
+    "C-Corp — Form 1120",
+    "Multi-state returns",
+  ],
+  // Industry-specific bookkeeping niches to feature
+  bookkeepingIndustries: [
+    { name: "ABA Therapy Practices", icon: "HeartHandshake" },
+    { name: "Dental Offices", icon: "Stethoscope" },
+    { name: "Law Firms", icon: "Landmark" },
+    { name: "Rental Property Businesses", icon: "Building2" },
+  ],
 };
 
 /* ---------------------------------------------------------------------------
@@ -407,65 +454,39 @@ export type TeamMember = {
   bio?: string;
 };
 
-// TODO: replace all of these with real team members, roles, credentials & photos.
-const PLACEHOLDER_PHOTO = "/assets/team/placeholder.svg";
-
 export const team: TeamMember[] = [
   {
     name: "Virti Shah",
     role: "Founder & CPA",
     level: "Leadership",
-    credentials: "CPA", // TODO: CONFIRM credentials (CPA, CA, etc.)
+    credentials: "CPA", // TODO: CONFIRM additional credentials if any
     experience: "12+ yrs", // TODO: CONFIRM
     photo: "/assets/founder/virti-shah.jpeg",
-    bio: "Founder of Virti Shah CPA, leading the firm's audit and assurance practice for U.S. accounting firms.", // TODO: expand bio
+    bio: "Virti Shah is a U.S. Certified Public Accountant and the founder of Virti Shah CPA. She built the firm as a specialised offshore partner to U.S. accounting firms, leading its audit, assurance and tax practice and shaping the multi-level review process that underpins every engagement. She works closely with U.S. CPA firms to extend their capacity through busy season while protecting the quality standards their clients expect.", // TODO: refine with founder's own wording
   },
   {
-    name: "Team Member", // TODO
-    role: "Audit Director",
-    level: "Leadership",
-    credentials: "CPA, CA",
-    experience: "10+ yrs",
-    photo: PLACEHOLDER_PHOTO,
-  },
-  {
-    name: "Team Member", // TODO
-    role: "Audit Manager",
+    name: "Krunal Ratadiya, EA",
+    role: "US Tax Manager",
     level: "Manager",
-    credentials: "CA",
-    experience: "8+ yrs",
-    photo: PLACEHOLDER_PHOTO,
+    credentials: "Enrolled Agent (EA)",
+    experience: "10 yrs",
+    photo: "/assets/team/krunal-ratadiya.jpeg",
+    bio: "IRS-licensed Enrolled Agent with 10 years of taxation experience, including more than 5 years dedicated exclusively to U.S. federal and multi-state tax compliance for U.S. CPA firms. He prepares and reviews returns across all major entity types — Forms 1040, 1065, 1120-S and 1120 — and oversees the quality review of all preparer work before partner sign-off, ensuring technical accuracy, compliance and consistency.",
   },
   {
-    name: "Team Member", // TODO
-    role: "Audit Manager",
+    name: "Jahnvi Prajapati",
+    role: "Tax Manager",
     level: "Manager",
-    credentials: "CA",
     experience: "7+ yrs",
-    photo: PLACEHOLDER_PHOTO,
-  },
-  {
-    name: "Team Member", // TODO
-    role: "Senior Auditor",
-    level: "Senior",
-    credentials: "CA (Inter)",
-    experience: "5+ yrs",
-    photo: PLACEHOLDER_PHOTO,
-  },
-  {
-    name: "Team Member", // TODO
-    role: "Senior Auditor",
-    level: "Senior",
-    experience: "4+ yrs",
-    photo: PLACEHOLDER_PHOTO,
+    photo: "/assets/team/jahnvi-prajapati.jpeg",
+    bio: "Tax Manager with 7+ years of experience, including 5+ years serving U.S. CPA firms and 2 years in Indian taxation and audit. She prepares and reviews Forms 1040, 1065, 1120-S, 1120 and multi-state returns, and oversees preparer reviews before partner sign-off. Her experience includes nonprofit taxation and the Form 990 series (990, 990-EZ, 990-PF and 990-T), public support testing, functional expense allocation and unrelated business income (UBI) analysis.",
   },
 ];
 
 export const teamCredentials = [
-  "U.S. CPAs", // TODO: CONFIRM which apply
+  "IRS-licensed Enrolled Agents (EA)",
+  "U.S. Certified Public Accountants (CPA)",
   "Chartered Accountants (CA)",
-  "Big 4 / national firm experience",
-  "ACCA / CPA candidates",
 ];
 
 /* ---------------------------------------------------------------------------
@@ -507,30 +528,49 @@ export const successStories: SuccessStory[] = [
 export type TechTool = { name: string; category: string; logo?: string };
 
 export const techStack: TechTool[] = [
-  { name: "CaseWare", category: "Audit & Working Papers" }, // TODO: CONFIRM tools used
-  { name: "CCH Axcess", category: "Audit & Tax", logo: "/assets/software/cch-axcess.png" },
-  { name: "CCH ProSystem fx", category: "Audit & Tax", logo: "/assets/software/profx.png" },
-  { name: "UltraTax", category: "Tax", logo: "/assets/software/ultratax.png" },
-  { name: "Lacerte", category: "Tax", logo: "/assets/software/lacerte-new.png" },
-  { name: "Drake", category: "Tax", logo: "/assets/software/drake.png" },
-  { name: "ProConnect / AdvanceFlow", category: "Audit & Tax", logo: "/assets/software/proconnect-or-advancedflow.png" },
-  { name: "QuickBooks", category: "Bookkeeping", logo: "/assets/software/quickbooks.png" },
-  { name: "Xero", category: "Bookkeeping", logo: "/assets/software/xero.png" },
-  { name: "Restaurant365", category: "Bookkeeping", logo: "/assets/software/r365.png" },
-  { name: "Splashtop", category: "Secure Remote Access", logo: "/assets/software/splashtop.png" },
+  // Tax Preparation
+  { name: "CCH Axcess Tax", category: "Tax Preparation", logo: "/assets/software/cch-axcess.png" },
+  { name: "UltraTax CS", category: "Tax Preparation", logo: "/assets/software/ultratax.png" },
+  { name: "ProConnect", category: "Tax Preparation", logo: "/assets/software/proconnect-or-advancedflow.png" },
+  { name: "Lacerte", category: "Tax Preparation", logo: "/assets/software/lacerte-new.png" },
+  { name: "ProSeries", category: "Tax Preparation" },
+  { name: "Drake", category: "Tax Preparation", logo: "/assets/software/drake.png" },
+  { name: "TaxAct", category: "Tax Preparation" },
+  // Workflow, CRM & Document Management
+  { name: "CCH Workflow", category: "Workflow, CRM & Document Management" },
+  { name: "Karbon", category: "Workflow, CRM & Document Management" },
+  { name: "Canopy", category: "Workflow, CRM & Document Management" },
+  { name: "TaxDome", category: "Workflow, CRM & Document Management" },
+  { name: "Monday.com", category: "Workflow, CRM & Document Management" },
+  // Bookkeeping & Accounting
+  { name: "QuickBooks Online", category: "Bookkeeping & Accounting", logo: "/assets/software/quickbooks.png" },
+  { name: "QuickBooks Desktop", category: "Bookkeeping & Accounting", logo: "/assets/software/quickbooks.png" },
+  { name: "Xero", category: "Bookkeeping & Accounting", logo: "/assets/software/xero.png" },
+  { name: "Wave", category: "Bookkeeping & Accounting" },
+  { name: "Zoho Books", category: "Bookkeeping & Accounting" },
+  { name: "Yardi", category: "Bookkeeping & Accounting" },
+  { name: "Rent Manager", category: "Bookkeeping & Accounting" },
+  // Payroll & Payments
+  { name: "ADP", category: "Payroll & Payments" },
+  { name: "Gusto", category: "Payroll & Payments" },
+  { name: "Paychex", category: "Payroll & Payments" },
+  { name: "Bill.com", category: "Payroll & Payments" },
+  { name: "Stripe", category: "Payroll & Payments" },
+  { name: "PayPal", category: "Payroll & Payments" },
+  // NOTE: Audit & assurance working-paper platforms to be confirmed by the audit team.
 ];
 
 /* ============================================================================
- *  FILL-IN CHECKLIST  (send these back and it's a one-file edit)
+ *  FILL-IN CHECKLIST — remaining items (audit team / Virti)
  *  ----------------------------------------------------------------------------
- *  [ ] capacityStats: real headcount, avg experience, engagements, any other stat
- *  [ ] teamComposition: partners / managers / seniors / staff counts, ratios,
- *      busy-season concurrent-engagement capacity, number of review levels
+ *  CONFIRMED (July 2026): teamComposition, taxBookkeeping, techStack,
+ *  team[] (Virti/Krunal/Jahnvi), teamCredentials, capacityStats.
+ *
+ *  STILL PENDING — provided separately by Virti & the audit team:
  *  [ ] compliance.soc.certified / iso.certified: true ONLY if a formal
  *      report/certificate exists (otherwise leave false = "aligned with")
- *  [ ] team[]: real names, roles, credentials, experience, photos
- *      (drop headshots in /public/assets/team/)
- *  [ ] teamCredentials: which credentials genuinely apply
- *  [ ] successStories[]: verify every metric; get permission before naming clients
- *  [ ] techStack: confirm which audit/working-paper platforms you actually use
+ *  [ ] successStories[]: verify/replace every metric; permission before naming clients
+ *  [ ] audit-specific capacity numbers (headcount, engagements, avg experience)
+ *  [ ] audit working-paper software (CaseWare, etc.) to add to techStack
+ *  [ ] additional audit-team member bios & photos for team[]
  * ==========================================================================*/

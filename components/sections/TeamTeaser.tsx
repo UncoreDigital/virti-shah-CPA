@@ -6,8 +6,8 @@ import { teamComposition } from "@/lib/firm-data";
 const highlights = [
   {
     icon: Users,
-    value: teamComposition.busySeasonCapacity,
-    label: "Concurrent engagements at peak season",
+    value: teamComposition.total,
+    label: "Professionals across audit, tax & bookkeeping",
   },
   {
     icon: Layers,
@@ -16,13 +16,13 @@ const highlights = [
   },
   {
     icon: Repeat,
-    value: teamComposition.seniorManagerRatio,
-    label: "Senior-to-manager staffing ratio",
+    value: `${teamComposition.managers.count}`,
+    label: "Managers overseeing engagement quality",
   },
   {
     icon: Award,
-    value: "CPA-led",
-    label: "Every engagement, U.S. standards",
+    value: "EA & CPA",
+    label: "Led by licensed professionals",
   },
 ];
 

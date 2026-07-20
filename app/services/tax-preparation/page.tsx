@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ServiceDetail from "@/components/ServiceDetail";
+import TaxPracticeBlock from "@/components/TaxPracticeBlock";
 import CTA from "@/components/sections/CTA";
 import { serviceDetails } from "@/lib/services-data";
 
@@ -13,7 +14,9 @@ export const metadata: Metadata = {
 export default function TaxPreparationPage() {
   return (
     <>
-      <ServiceDetail data={data} />
+      <ServiceDetail data={data}>
+        <TaxPracticeBlock />
+      </ServiceDetail>
       <CTA />
     </>
   );

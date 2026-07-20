@@ -13,54 +13,79 @@ export type ServiceDetail = {
 export const serviceDetails: Record<string, ServiceDetail> = {
   bookkeeping: {
     slug: "bookkeeping",
-    title: "Bookkeeping",
+    title: "Bookkeeping & Client Accounting Services",
     metaDescription:
-      "Comprehensive outsourced bookkeeping services — QuickBooks, Xero and R365 experts handling reconciliations, AP/AR and customized financial reporting.",
+      "Outsourced bookkeeping, month-end close, CAS, payroll and sales-tax compliance for U.S. CPA, EA and bookkeeping firms — 300+ monthly clients across QuickBooks, Xero and more.",
     image: "/assets/services/bookkeeping.jpg",
     intro:
-      "VSCPA offers comprehensive bookkeeping services to help businesses stay on top of their finances.",
+      "Dedicated bookkeeping, month-end close and Client Accounting Services — supporting 300+ monthly clients for U.S. CPA, EA and bookkeeping firms.",
     paragraphs: [
-      "VSCPA offers comprehensive bookkeeping services to help businesses stay on top of their finances. Our outsourced bookkeeping services take the hassle off your plate, allowing you to focus on your core business while we take care of your bookkeeping needs.",
-      "Our team of expert bookkeepers is proficient in using various accounting software, including Quickbooks (Online and Desktop), Xero, and R365. We can help you set up your books, reconcile bank and credit card statements, manage accounts payable and accounts receivable, and produce financial reports customized to your business needs.",
-      "By outsourcing your bookkeeping to us, you can make informed financial and tax decisions based on accurate data and up-to-date books. This allows you to save time and money while improving your financial decision-making capabilities.",
-      "Whether you're a small business owner or a large corporation, VSCPA can help you streamline your bookkeeping processes and gain better insights into your financial health. Contact us today to learn more about our bookkeeping services and how we can help your business thrive.",
+      "We manage recurring bookkeeping and month-end close for 300+ monthly clients across CPA firms, EA firms and bookkeeping firms — reconciliations, AP/AR, payroll and management reporting delivered on a predictable monthly cadence.",
+      "Beyond core bookkeeping, we provide full Client Accounting Services (CAS), payroll processing and sales-tax compliance, so your firm can offer a complete outsourced accounting function to its clients without adding internal staff.",
+      "Our team works across QuickBooks Online and Desktop, Xero, Wave, Zoho Books and industry platforms such as Yardi and Rent Manager — plus payment and payroll tools including Bill.com, Gusto, ADP and Paychex — adapting to whatever stack your clients already run on.",
     ],
-    listTitle: "Our Bookkeeping services",
+    listTitle: "Our Accounting Services",
     list: [
-      "Year-end Bookkeeping",
-      "Monthly Bookkeeping",
-      "Catch up & Clean up",
-      "Bank Reconciliation",
-      "Account receivable/payable",
-      "Financial statement analysis",
-      "Preparation of Cash Flow Statement",
+      "Bookkeeping & Month-End Close",
+      "Client Accounting Services (CAS)",
+      "Payroll",
+      "Sales Tax Compliance",
+      "Bank & Credit Card Reconciliation",
+      "Accounts Payable / Receivable",
+      "Management Reporting",
     ],
     highlight:
-      "Proficient in Quickbooks (Online and Desktop), Xero and R365.",
+      "300+ monthly bookkeeping clients across CPA, EA and bookkeeping firms — with industry-specific expertise.",
   },
   "tax-preparation": {
     slug: "tax-preparation",
     title: "Tax Preparation",
     metaDescription:
-      "Reliable, efficient outsourced tax preparation. Experienced professionals using Lacerte, UltraTax, ProSeries, ATX and Drake to process returns accurately and on time.",
+      "EA-led outsourced tax preparation for U.S. CPA firms — 2,000+ returns each season across Forms 1040, 1120-S, 1065, 1120 and multi-state, with a 3-level review process.",
     image: "/assets/services/tax-preparation.jpg",
     intro:
-      "A reliable and efficient tax preparation service to help you navigate the tax season.",
+      "IRS-licensed, EA-led tax preparation that scales your firm through busy season — over 2,000 returns each season.",
     paragraphs: [
-      "Looking for a reliable and efficient tax preparation service to help you navigate the tax season? Look no further than VSCPA. Our team of experienced tax professionals will assist you in taking on more work while ensuring timely delivery of high-quality output, increasing your profitability, and reducing operating expenses.",
-      "At VSCPA, we understand the importance of using cutting-edge tax software and technology to provide our clients with the best possible results. That's why we utilize Intuit's Lacerte, Creative Solutions' UltraTax, Intuit ProSeries, ATX, and Drake to ensure that your tax returns are processed accurately and efficiently.",
-      "By choosing VSCPA, you'll be saving yourself the hassle of scouting, evaluating, and training personnel, all at a fraction of the cost. Trust us to handle your tax preparation needs, and experience the peace of mind that comes with knowing your financials are in expert hands.",
+      "Our tax practice is led by IRS-licensed Enrolled Agents (EAs) and prepares 2,000+ returns each season for U.S. CPA firms — across individual, partnership, S-corp, C-corp and multi-state returns. Your firm takes on more work while we deliver accurate, review-ready output on time.",
+      "Every return moves through a structured, multi-level review — Preparer → Senior Reviewer → Tax Manager — before it reaches your CPA or partner for final sign-off. That process protects technical accuracy, compliance and consistency at volume, so nothing lands on a partner's desk unchecked.",
+      "You get dedicated capacity that works inside your software and your workflow — CCH Axcess, UltraTax, ProConnect, Lacerte, ProSeries, Drake and TaxAct — without the cost and hassle of scouting, evaluating and training seasonal staff.",
     ],
-    listTitle: "Our Preparation Services",
+    listTitle: "Our Tax Services",
     list: [
-      "Individual returns - Form 1040",
-      "Partnership returns - Form 1065",
-      "S-corp returns - Form 1120-S",
-      "C-corp returns - Form 1120-C",
-      "NFP returns - Form 990",
+      "Tax Preparation (1040, 1065, 1120-S, 1120)",
+      "Multi-state returns",
+      "Independent Tax Review",
+      "Tax Planning",
+      "IRS & State Notice Responses",
+      "Tax Advisory",
     ],
     highlight:
-      "Software: Intuit's Lacerte, Creative Solutions' UltraTax, Intuit ProSeries, ATX and Drake.",
+      "Led by IRS-licensed Enrolled Agents (EAs). 2,000+ returns prepared each season through a 3-level review process.",
+  },
+  "independent-tax-review": {
+    slug: "independent-tax-review",
+    title: "Independent Tax Review",
+    metaDescription:
+      "Standalone independent tax review for U.S. CPA firms — 500+ returns reviewed annually for technical accuracy, compliance and consistency, whoever prepared them.",
+    image: "/assets/services/tax-preparation.jpg",
+    intro:
+      "A standalone quality-review service — send us returns your own staff or another provider prepared, and we review them independently.",
+    paragraphs: [
+      "Independent Tax Review is a distinct, standalone service — not part of the returns we prepare. CPA firms send us returns prepared by their own staff or by other providers, and our Enrolled Agents and Tax Managers perform an independent quality review before the return is filed.",
+      "We review 500+ returns each year for technical accuracy, compliance and consistency — checking entity-specific treatment, multi-state positions, diagnostics and disclosures — and return clear reviewer notes your team can act on.",
+      "It's an efficient way to add a senior second-look to your process, catch issues before they reach the client, and give your partners confidence in work prepared under time pressure or by less experienced staff.",
+    ],
+    listTitle: "What the review covers",
+    list: [
+      "Technical accuracy & entity treatment",
+      "Federal & multi-state positions",
+      "Software diagnostics resolution",
+      "Disclosures & consistency checks",
+      "Prior-year comparison",
+      "Documented reviewer notes for your team",
+    ],
+    highlight:
+      "500+ returns independently reviewed annually — a standalone service, separate from the 2,000+ returns we prepare.",
   },
   audit: {
     slug: "audit",

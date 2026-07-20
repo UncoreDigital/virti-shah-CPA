@@ -52,7 +52,8 @@ export const navItems: NavItem[] = [
     dropdown: [
       { name: "Audit & Assurance", href: "/services/audit" },
       { name: "Tax Preparation", href: "/services/tax-preparation" },
-      { name: "Bookkeeping", href: "/services/bookkeeping" },
+      { name: "Independent Tax Review", href: "/services/independent-tax-review" },
+      { name: "Bookkeeping & CAS", href: "/services/bookkeeping" },
     ],
   },
   { name: "Contact", href: "/contact" },
@@ -60,13 +61,13 @@ export const navItems: NavItem[] = [
 
 export const services = [
   {
-    slug: "bookkeeping",
+    slug: "audit",
     number: "01",
-    title: "Bookkeeping",
-    icon: "/assets/icons/icon-service-01.png",
+    title: "Audit & Assurance",
+    icon: "/assets/icons/icon-service-03.png",
     teaser:
-      "Outsourced bookkeeping can be a valuable solution for businesses looking to streamline their financial operations, save costs, and stay compliant with tax laws and regulations.",
-    note: "Whether it is to make a financial decision or to know the performance of your business or to prepare your taxes, the most important thing is maintaining up to date books.",
+      "Dedicated offshore audit support across financial statement, nonprofit, EBP, HUD, Single audits, reviews and compilations — working inside your engagement methodology.",
+    note: "An audit is the highest level of assurance and it demands the same level of quality. We are an audit-specialised outsourcing partner, not a generalist.",
   },
   {
     slug: "tax-preparation",
@@ -74,17 +75,26 @@ export const services = [
     title: "Tax Preparation",
     icon: "/assets/icons/icon-service-02.png",
     teaser:
-      "Outsourcing tax preparation can be a valuable solution for businesses looking to stay compliant with tax laws and regulations, reduce the risk of errors in their tax filings, and save time and resources.",
-    note: "All the accountants dread busy season but, when you outsource your taxes to us, you can glide through the season while maintaining a healthy work-life balance while we take up all the hassles.",
+      "EA-led preparation of 2,000+ returns each season — 1040, 1065, 1120-S, 1120 and multi-state — with a structured 3-level review before partner sign-off.",
+    note: "Led by IRS-licensed Enrolled Agents, so your firm can glide through busy season while we absorb the volume.",
   },
   {
-    slug: "audit",
+    slug: "independent-tax-review",
     number: "03",
-    title: "Audit",
-    icon: "/assets/icons/icon-service-03.png",
+    title: "Independent Tax Review",
+    icon: "/assets/icons/icon-service-04.png",
     teaser:
-      "Outsourcing audit tasks can be a valuable solution for businesses looking to ensure compliance with specific audit requirements, reduce the risk of errors and non-compliance, and save time and resources.",
-    note: "An audit is the highest level of assurance and it demands the same level of quality. We pride ourselves as an Audit specialised outsourcing firm.",
+      "A standalone quality-review service — send us returns prepared by your own staff or another provider and we review them independently for accuracy and compliance.",
+    note: "500+ returns independently reviewed each year — a senior second-look, separate from the returns we prepare.",
+  },
+  {
+    slug: "bookkeeping",
+    number: "04",
+    title: "Bookkeeping & CAS",
+    icon: "/assets/icons/icon-service-01.png",
+    teaser:
+      "Bookkeeping, month-end close, Client Accounting Services, payroll and sales-tax compliance for 300+ monthly clients — with industry-specific expertise.",
+    note: "A complete outsourced accounting function your firm can offer clients without adding internal staff.",
   },
 ];
 

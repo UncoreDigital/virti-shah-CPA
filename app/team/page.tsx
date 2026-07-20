@@ -10,6 +10,7 @@ import {
   teamComposition,
   teamCredentials,
   capacityStats,
+  taxBookkeeping,
 } from "@/lib/firm-data";
 
 export const metadata: Metadata = {
@@ -20,9 +21,9 @@ export const metadata: Metadata = {
 
 const capacityHighlights = [
   {
-    icon: CalendarClock,
-    value: teamComposition.busySeasonCapacity,
-    label: "Concurrent engagements at peak season",
+    icon: Repeat,
+    value: teamComposition.total,
+    label: "Professionals across the firm",
   },
   {
     icon: Layers,
@@ -30,19 +31,19 @@ const capacityHighlights = [
     label: "Levels of review before partner sign-off",
   },
   {
-    icon: Repeat,
-    value: teamComposition.seniorManagerRatio,
-    label: "Senior-to-manager staffing ratio",
+    icon: CalendarClock,
+    value: taxBookkeeping.stats[0].value,
+    label: taxBookkeeping.stats[0].label,
   },
   {
     icon: Award,
-    value: "CPA-led",
-    label: "Every engagement, U.S. standards",
+    value: "EA & CPA",
+    label: "Led by licensed professionals",
   },
 ];
 
 const composition = [
-  teamComposition.partners,
+  teamComposition.founder,
   teamComposition.managers,
   teamComposition.seniors,
   teamComposition.staff,
@@ -139,14 +140,14 @@ export default function TeamPage() {
             {team.map((member, i) => (
               <Reveal key={`${member.name}-${i}`} delay={(i % 3) * 0.06}>
                 <div className="bg-card rounded-2xl overflow-hidden shadow-elegant h-full flex flex-col">
-                  <div className="relative aspect-[4/3] bg-muted">
+                  <div className="relative aspect-[4/5] bg-muted">
                     <Image
                       src={member.photo}
                       alt={member.name}
                       fill
                       sizes="(max-width: 1024px) 100vw, 33vw"
                       unoptimized
-                      className="object-cover"
+                      className="object-cover object-top"
                     />
                     <span className="absolute top-3 left-3 text-[11px] font-inter font-semibold uppercase tracking-wide bg-primary/90 text-primary-foreground px-2.5 py-1 rounded-full">
                       {member.level}
@@ -172,7 +173,7 @@ export default function TeamPage() {
                       )}
                     </div>
                     {member.bio && (
-                      <p className="font-inter text-sm text-slate leading-relaxed mt-auto">
+                      <p className="font-inter text-sm text-slate leading-relaxed">
                         {member.bio}
                       </p>
                     )}
