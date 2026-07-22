@@ -7,7 +7,7 @@ export const site = {
   phone: "+1 (646) 236-6829",
   phoneHref: "tel:+16462366829",
   emailHref: "mailto:info@virtishahcpa.com",
-  address: "401-403, Span Trade Centre, Opp. Kocharab Ashram, Paldi, Ahmedabad 380007",
+  address: "Mauryansh Elanza, 202-203,Shyamal Cross Rd, Near parekh's hospital, Shyamal, Ahmedabad, Gujarat 380015",
   hours: "Mon – Sat | 10AM to 7PM | Closed Sunday",
   linkedin: "https://www.linkedin.com/in/virtishahcpa/",
 };

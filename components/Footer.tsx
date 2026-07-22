@@ -126,7 +126,7 @@ export default function Footer() {
 
         <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-3">
           <p className="text-primary-foreground/40 font-inter text-sm">
-            © {new Date().getFullYear()} {site.name}. All rights reserved.
+            © {new Date().getFullYear()} {site.name}. All rights reserved. | Powered by Uncore Digital
           </p>
           <Link
             href="/privacy-policy"
