@@ -447,7 +447,7 @@ export const securityGroups: SecurityGroup[] = [
 export type TeamMember = {
   name: string;
   role: string;
-  level: "Leadership" | "Manager" | "Senior" | "Staff";
+  level: "Leadership" | "Manager" | "Consultant" | "Senior" | "Staff";
   credentials?: string; // e.g. "CPA, CA"
   experience?: string; // e.g. "12+ yrs"
   photo: string;
@@ -480,6 +480,23 @@ export const team: TeamMember[] = [
     experience: "7+ yrs",
     photo: "/assets/team/jahnvi-prajapati.jpeg",
     bio: "Tax Manager with 7+ years of experience, including 5+ years serving U.S. CPA firms and 2 years in Indian taxation and audit. She prepares and reviews Forms 1040, 1065, 1120-S, 1120 and multi-state returns, and oversees preparer reviews before partner sign-off. Her experience includes nonprofit taxation and the Form 990 series (990, 990-EZ, 990-PF and 990-T), public support testing, functional expense allocation and unrelated business income (UBI) analysis.",
+  },
+  {
+    name: "Uttar Hingu",
+    role: "Audit Manager",
+    level: "Manager",
+    experience: "8+ yrs",
+    photo: "/assets/team/uttar-hingu.jpeg",
+    bio: "Uttar Hingu is an Audit Manager with 8+ years of professional experience, including 4.5+ years specializing in U.S. audit and assurance services. He serves clients across the Affordable Housing (HUD), Nonprofit (NPO), Employee Benefit Plans (EBP), and Community Associations (CIRA) sectors. His expertise spans audit planning, financial reporting, and regulatory compliance in accordance with U.S. professional standards. Dedicated to innovation and continuous learning, Uttar is passionate about leveraging Artificial Intelligence (AI) to enhance audit quality, streamline workflows, and improve efficiency while delivering exceptional client service.",
+  },
+  {
+    name: "Akshat Shah",
+    role: "US Audit & Assurance Consultant",
+    level: "Consultant",
+    credentials: "Chartered Accountant (CA)",
+    experience: "8+ yrs",
+    photo: "/assets/team/akshat-shah.jpeg",
+    bio: "Akshat Shah is a Chartered Accountant with 8+ years of professional experience, including 4+ years specializing in U.S. audit and assurance services. He provides professional consulting services to Virti Shah CPA in the area of U.S. audit and assurance, supporting Audit, Review, and Compilation engagements for both standalone and consolidated financial statements in accordance with U.S. GAAP and AICPA professional standards. His experience includes serving clients across Community Associations (CIRA), Affordable Housing (HUD), Nonprofit Organizations (NPO), Real Estate & Construction, Healthcare, Finance, and closely held private companies. He has been involved in engagement planning, risk assessment, audit execution, financial reporting, quality review, and coordinating with engagement teams across a wide range of assurance engagements. Akshat enjoys working on technically challenging engagements and is committed to delivering practical, timely, and high-quality assurance services while maintaining compliance with applicable professional standards.",
   },
 ];
 
