@@ -38,6 +38,11 @@ export const metadata: Metadata = {
     "EBP audit",
   ],
   metadataBase: new URL("https://virtishahcpa.com"),
+  icons: {
+    icon: "/assets/favicon.png",
+    shortcut: "/assets/favicon.png",
+    apple: "/assets/favicon.png",
+  },
 };
 
 export default function RootLayout({
