@@ -367,75 +367,60 @@ export const industries: Industry[] = [
 ];
 
 /* ---------------------------------------------------------------------------
- *  SECURITY & COMPLIANCE — grouped controls. Certification claims are gated.
- *  ⚠️  Do NOT claim a formal SOC 2 / ISO 27001 CERTIFICATE unless one exists.
- *      Leave `certified: false` to display "aligned with" language, which is
- *      accurate for a firm that operates the controls without a formal report.
+ *  SECURITY & COMPLIANCE
+ *  ⚠️  This copy is deliberately framework-INFORMED, not framework-CERTIFIED.
+ *      Wording is "designed with reference to" — never "aligned with",
+ *      "compliant" or "certified" — and `frameworkDisclaimer` must stay on the
+ *      page alongside the framework cards. Do not reintroduce Certified /
+ *      Aligned badges unless a real report exists to back the claim.
  * ------------------------------------------------------------------------- */
 export const compliance = {
-  soc: {
-    certified: false, // TODO: set true ONLY if you hold a SOC report
-    label: "SOC 2",
-    aligned:
-      "Our control environment is aligned with SOC 2 Trust Services Criteria — security, availability, confidentiality and privacy.",
-    certifiedText:
-      "SOC 2 Type II examined — report available under NDA.", // used only when certified: true
-  },
-  iso: {
-    certified: false, // TODO: set true ONLY if you hold ISO 27001
-    label: "ISO 27001",
-    aligned:
-      "Our information security management practices are aligned with the ISO/IEC 27001 framework.",
-    certifiedText: "ISO/IEC 27001 certified information security management system.",
-  },
+  eyebrow: "Framework-Informed Security Practices",
+  frameworks: [
+    {
+      label: "SOC 2 Trust Services Criteria",
+      text: "Selected practices are designed with reference to relevant principles involving security, availability, confidentiality and privacy.",
+    },
+    {
+      label: "ISO/IEC 27001",
+      text: "Policies and procedures are developed with reference to risk management, access control, information handling and incident management principles.",
+    },
+  ],
+  frameworkDisclaimer:
+    "Framework references describe VSCPA's internal control design approach and do not represent certification, independent attestation, audit or endorsement.",
 };
 
-export type SecurityGroup = { title: string; icon: string; items: string[] };
+export type SecurityGroup = { title: string; icon: string; description: string };
+
+export const securityModel = {
+  eyebrow: "How We Protect Client Information",
+  heading: "A Practical Security Model for Client Work",
+};
 
 export const securityGroups: SecurityGroup[] = [
   {
-    title: "Access & Network",
-    icon: "Network",
-    items: [
-      "VPN-secured connections to all client servers",
-      "Multi-factor authentication (MFA) on every system",
-      "Role-based, least-privilege access to client data",
-      "Multiple segregated LAN networks",
-      "Firewall-restricted internet & blocked harmful sites",
-    ],
+    title: "Controlled Access",
+    icon: "Users",
+    description:
+      "Access is limited to personnel assigned to the agreed work and responsibilities.",
   },
   {
-    title: "Data Protection",
+    title: "Managed Workstations",
+    icon: "Monitor",
+    description:
+      "Client work uses company-managed devices, approved software and centrally administered settings.",
+  },
+  {
+    title: "On-Site Operations",
+    icon: "Building2",
+    description:
+      "Assigned work is performed from VSCPA office locations under defined workplace and device procedures.",
+  },
+  {
+    title: "Confidentiality Procedures",
     icon: "Lock",
-    items: [
-      "Encryption in transit and at rest",
-      "External plug-in / USB devices disabled",
-      "Restriction on printing of client documents",
-      "Automatic, redundant backups to prevent data loss",
-      "Defined data retention & secure disposal policy",
-    ],
-  },
-  {
-    title: "People & Facility",
-    icon: "ShieldCheck",
-    items: [
-      "Background checks on all personnel",
-      "Signed confidentiality & NDA agreements",
-      "100% on-site operations — strictly no work-from-home",
-      "Password-protected, centrally-managed workstations",
-      "Licensed software only, with regular security updates",
-    ],
-  },
-  {
-    title: "Governance & Monitoring",
-    icon: "ClipboardCheck",
-    items: [
-      "Regular internal system & security audits",
-      "Centralised device configuration & control",
-      "Incident response & escalation procedures",
-      "Documented policies reviewed periodically",
-      "Client-specific security addenda on request",
-    ],
+    description:
+      "Assigned personnel follow documented confidentiality and information-handling requirements.",
   },
 ];
 

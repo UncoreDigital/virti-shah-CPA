@@ -4,10 +4,12 @@ import { ChevronRight } from "lucide-react";
 export default function PageBanner({
   title,
   subtitle,
+  eyebrow,
   crumbs = [],
 }: {
   title: string;
   subtitle?: string;
+  eyebrow?: string;
   crumbs?: { name: string; href: string }[];
 }) {
   return (
@@ -31,6 +33,11 @@ export default function PageBanner({
             </span>
           ))}
         </div>
+        {eyebrow && (
+          <p className="font-inter text-sm font-semibold uppercase tracking-[0.18em] text-gold mb-4">
+            {eyebrow}
+          </p>
+        )}
         <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-5">
           {title}
         </h1>

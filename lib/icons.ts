@@ -9,6 +9,7 @@ import {
   Users,
   Network,
   Lock,
+  Monitor,
   ShieldCheck,
   ClipboardCheck,
   type LucideIcon,
@@ -29,6 +30,7 @@ export const iconMap: Record<string, LucideIcon> = {
   Users,
   Network,
   Lock,
+  Monitor,
   ShieldCheck,
   ClipboardCheck,
 };
