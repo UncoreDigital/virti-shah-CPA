@@ -1,183 +1,120 @@
-"use client";
-
-import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  ArrowUpRight,
-  CheckCircle2,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { ArrowUpRight, CheckCircle2, ChevronDown } from "lucide-react";
+import { hero } from "@/lib/homepage";
 
-const slides = [
-  {
-    image: "/assets/hero/slide-1.jpg",
-    eyebrow: "Offshore Audit & Assurance for U.S. CPA Firms",
-    titleLead: "Dedicated Offshore",
-    titleHighlight: "Audit & Assurance",
-    titleTail: "Professionals",
-    subtitle:
-      "We work as a seamless extension of your engagement teams — scaling your assurance practice through busy season without adding partner overhead or sacrificing quality.",
-    objectPosition: "object-[60%_center] md:object-center",
-  },
-  {
-    image: "/assets/hero/slide-2.jpg",
-    eyebrow: "Audit-Specialised Outsourcing",
-    titleLead: "Extend your audit practice for",
-    titleHighlight: "NFP, EBP, HUD & Single",
-    titleTail: "Audits",
-    subtitle:
-      "An audit is the highest level of assurance — and it demands the same level of quality. Experienced audit professionals working within your firm's engagement methodology.",
-    objectPosition: "object-[70%_center] md:object-center",
-  },
-];
-
-const highlights = [
-  "U.S. CPA-led, multi-level review process",
-  "SOC 2-aligned controls & 100% secured, on-site operations",
-  "Integrated with your audit methodology & file structure",
-];
+/**
+ * Homepage Section 1 — locked copy.
+ *
+ * Entrance is a CSS animation (not framer-motion) so the copy is never gated
+ * behind hydration; if JS is slow or blocked the text still renders.
+ *
+ * Height uses rem steps rather than vh: mobile browsers resize the viewport as
+ * the address bar hides, which makes vh-based heights jump mid-scroll.
+ */
+const stagger = (i: number) => ({
+  animationDelay: `${i * 90}ms`,
+  animationFillMode: "both" as const,
+});
 
 export default function Hero() {
-  const [current, setCurrent] = useState(0);
-
-  const next = useCallback(
-    () => setCurrent((p) => (p + 1) % slides.length),
-    []
-  );
-  const prev = () =>
-    setCurrent((p) => (p - 1 + slides.length) % slides.length);
-
-  useEffect(() => {
-    const t = setInterval(next, 6500);
-    return () => clearInterval(t);
-  }, [next, current]);
-
-  const slide = slides[current];
-
   return (
-    <section className="relative min-h-[88vh] flex items-center overflow-hidden">
-      {/* Background slides */}
+    <section className="relative bg-primary min-h-[34rem] sm:min-h-[38rem] lg:min-h-[44rem] xl:min-h-[48rem] flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
-        {slides.map((s, i) => (
-          <motion.div
-            key={s.image}
-            className="absolute inset-0"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: current === i ? 1 : 0 }}
-            transition={{ duration: 1 }}
-          >
-            <Image
-              src={s.image}
-              alt=""
-              fill
-              priority={i === 0}
-              sizes="100vw"
-              className={`object-cover ${s.objectPosition}`}
-            />
-          </motion.div>
-        ))}
-        {/* Navy overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/50 md:to-primary/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
+        <Image
+          src="/assets/hero/slide-1.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[68%_center] md:object-[60%_center] lg:object-center"
+        />
+        {/*
+          Scrim is weighted to the left, where the copy sits, so the photograph
+          stays visible on the right instead of being flattened to a navy block.
+          Mobile gets a heavier base tint because the text spans the full width.
+        */}
+        <div className="absolute inset-0 bg-primary/65 md:bg-primary/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-transparent md:via-primary/65 md:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-dot-grid opacity-[0.12]" />
+        {/* Teal glow, kept off the photo side */}
+        <div className="absolute -top-32 -left-24 w-[32rem] h-[32rem] rounded-full bg-gold/20 blur-[120px]" />
       </div>
 
-      <div className="container-wide relative z-10 pt-32 pb-24 lg:pt-40 lg:pb-28">
-        <div className="grid lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-8">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={current}
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -16 }}
-                transition={{ duration: 0.5 }}
-              >
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="h-px w-10 bg-gold" />
-                  <span className="text-gold font-inter text-xs md:text-sm font-medium tracking-widest uppercase">
-                    {slide.eyebrow}
-                  </span>
-                </div>
-
-                <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 max-w-3xl">
-                  {slide.titleLead}{" "}
-                  <span className="text-gradient-gold">
-                    {slide.titleHighlight}
-                  </span>{" "}
-                  {slide.titleTail}
-                </h1>
-
-                <p className="font-inter text-primary-foreground/80 text-lg leading-relaxed mb-8 max-w-xl">
-                  {slide.subtitle}
-                </p>
-              </motion.div>
-            </AnimatePresence>
-
-            <ul className="space-y-3 mb-10">
-              {highlights.map((h) => (
-                <li
-                  key={h}
-                  className="flex items-center gap-3 font-inter text-primary-foreground/85"
-                >
-                  <CheckCircle2 className="w-5 h-5 text-gold flex-shrink-0" />
-                  {h}
-                </li>
-              ))}
-            </ul>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="btn-gold">
-                Book a Trial
-                <ArrowUpRight className="w-4 h-4" />
-              </Link>
-              <Link
-                href="/services/audit"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold border-2 border-white/30 text-white hover:bg-white/10 transition-all"
-              >
-                Audit Services
-              </Link>
-            </div>
+      {/* w-full: the section is a flex row, so without it this box shrink-wraps
+          and mx-auto centres it instead of sitting on the page gutter. */}
+      <div className="container-wide relative z-10 w-full pt-28 pb-20 sm:pt-32 sm:pb-24 lg:pt-36 lg:pb-28">
+        <div className="max-w-4xl">
+          <div
+            style={stagger(0)}
+            className="animate-fade-in-up inline-flex items-center gap-2.5 rounded-full border border-gold/40 bg-primary/50 px-3.5 py-2 mb-6 sm:mb-7 backdrop-blur-sm"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-gold" />
+            </span>
+            <span className="font-inter text-[11px] sm:text-xs md:text-[13px] font-semibold tracking-[0.16em] uppercase text-gold-light">
+              {hero.eyebrow}
+            </span>
           </div>
 
-          {/* Arrow controls */}
-          <div className="hidden lg:flex lg:col-span-4 flex-col items-end justify-center gap-4">
-            <div className="flex gap-3">
-              <button
-                onClick={prev}
-                aria-label="Previous slide"
-                className="p-3 border border-white/25 rounded-full text-white hover:bg-white/10 transition-colors"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              <button
-                onClick={next}
-                aria-label="Next slide"
-                className="p-3 border border-white/25 rounded-full text-white hover:bg-white/10 transition-colors"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-            </div>
+          {/* Fluid type: scales smoothly between breakpoints and under zoom. */}
+          <h1
+            style={stagger(1)}
+            className="animate-fade-in-up font-playfair text-[clamp(2rem,5.2vw,3.75rem)] leading-[1.12] font-bold text-primary-foreground mb-5 sm:mb-6 [text-shadow:0_2px_18px_hsl(203_53%_18%/0.45)]"
+          >
+            <span className="text-gradient-gold-bright">{hero.h1Lead}</span>{" "}
+            {hero.h1Tail}
+          </h1>
+
+          <p
+            style={stagger(2)}
+            className="animate-fade-in-up font-inter text-primary-foreground/90 text-[clamp(0.95rem,1.15vw,1.125rem)] leading-relaxed mb-8 sm:mb-9 max-w-xl lg:max-w-2xl [text-shadow:0_1px_12px_hsl(203_53%_18%/0.5)]"
+          >
+            {hero.body}
+          </p>
+
+          <div
+            style={stagger(3)}
+            className="animate-fade-in-up flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 mb-10 sm:mb-12"
+          >
+            <Link href={hero.primaryCta.href} className="btn-gold group">
+              {hero.primaryCta.label}
+              <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
+            <Link
+              href={hero.secondaryCta.href}
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold border-2 border-white/35 text-white hover:bg-white/10 hover:border-white/55 transition-all duration-300"
+            >
+              {hero.secondaryCta.label}
+            </Link>
           </div>
+
+          {/* Trust strip */}
+          <ul
+            style={stagger(4)}
+            className="animate-fade-in-up flex flex-wrap gap-2.5 sm:gap-3"
+          >
+            {hero.trustPoints.map((point) => (
+              <li
+                key={point}
+                className="chip-glass font-inter text-[13px] sm:text-sm text-primary-foreground"
+              >
+                <CheckCircle2 className="w-4 h-4 text-gold-light flex-shrink-0" />
+                {point}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
-      {/* Dots */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3">
-        {slides.map((s, i) => (
-          <button
-            key={s.image}
-            onClick={() => setCurrent(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            className={`rounded-full transition-all duration-300 ${
-              i === current
-                ? "w-8 h-2.5 bg-gold"
-                : "w-2.5 h-2.5 bg-white/40 hover:bg-white/70"
-            }`}
-          />
-        ))}
+      {/* Scroll cue — only on screens tall enough to have room for it */}
+      <div className="absolute bottom-7 left-1/2 -translate-x-1/2 z-10 hidden flex-col items-center gap-1.5 text-primary-foreground/60 [@media(min-height:820px)]:lg:flex">
+        <span className="font-inter text-[10px] uppercase tracking-[0.2em]">
+          Scroll
+        </span>
+        <ChevronDown className="w-4 h-4 animate-float" />
       </div>
     </section>
   );

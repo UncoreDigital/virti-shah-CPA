@@ -20,7 +20,7 @@ export default function ContactForm() {
   );
   const [errorMsg, setErrorMsg] = useState("");
   const [form, setForm] = useState(EMPTY);
-  // Honeypot — kept off-screen; only bots fill it.
+  // Honeypot, kept off-screen; only bots fill it.
   const [company_website, setCompanyWebsite] = useState("");
 
   const handleChange = (
@@ -51,7 +51,7 @@ export default function ContactForm() {
       setForm(EMPTY);
     } catch {
       setErrorMsg(
-        "Network error — please check your connection and try again."
+        "Network error, please check your connection and try again."
       );
       setStatus("error");
     }
@@ -65,7 +65,7 @@ export default function ContactForm() {
           Thank you!
         </h3>
         <p className="font-inter text-slate">
-          Your message has been sent — our team will get back to you promptly.
+          Your message has been sent, our team will get back to you promptly.
           You can also reach us anytime at{" "}
           <a href={site.emailHref} className="text-gold hover:underline">
             {site.email}

@@ -5,7 +5,7 @@ export default function SectionHeading({
   eyebrow,
   title,
   subtitle,
-  align = "center",
+  align = "left",
   light = false,
 }: {
   eyebrow?: string;
@@ -18,7 +18,7 @@ export default function SectionHeading({
   return (
     <div
       className={cn(
-        "max-w-2xl",
+        "max-w-3xl",
         centered ? "text-center mx-auto" : "text-left"
       )}
     >
@@ -46,7 +46,7 @@ export default function SectionHeading({
           <p
             className={cn(
               "font-inter leading-relaxed",
-              light ? "text-primary-foreground/70" : "text-slate"
+              light ? "text-primary-foreground/85" : "text-slate"
             )}
           >
             {subtitle}

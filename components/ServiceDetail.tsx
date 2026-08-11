@@ -89,7 +89,7 @@ export default function ServiceDetail({
                   <h3 className="font-playfair text-xl font-semibold text-primary-foreground mb-2">
                     Ready to get started?
                   </h3>
-                  <p className="font-inter text-sm text-primary-foreground/70 mb-5">
+                  <p className="font-inter text-sm text-primary-foreground/85 mb-5">
                     Book a trial and see the VSCPA difference.
                   </p>
                   <Link href="/contact" className="btn-gold w-full justify-center">

@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 
 const points = [
   "A team of qualified CAs, CPAs and accounting professionals",
-  "Founded by Virti Shah, CA, CPA, B.Com — 11+ years of experience",
+  "Founded by Virti Shah, CA, CPA, B.Com, with 11+ years of experience",
   "Five years at Citrin Cooperman across audit, tax and advisory",
   "Highest levels of ethics, integrity and multi-level reviews",
 ];
@@ -19,7 +19,7 @@ export default function AboutTeaser() {
             <div className="absolute -inset-4 bg-gradient-gold opacity-10 rounded-3xl blur-2xl" />
             <Image
               src="/assets/founder/virti-shah.jpeg"
-              alt="Virti Shah, CA, CPA, B.Com — Founder of Virti Shah CPA"
+              alt="Virti Shah, CA, CPA, B.Com, Founder of Virti Shah CPA"
               width={560}
               height={640}
               className="relative rounded-3xl shadow-elegant-lg w-full object-cover"
@@ -28,8 +28,8 @@ export default function AboutTeaser() {
               <div className="font-playfair text-2xl font-bold text-gold">
                 Virti Shah
               </div>
-              <div className="font-inter text-xs text-primary-foreground/70">
-                CA, CPA, B.Com — Founder
+              <div className="font-inter text-xs text-primary-foreground/85">
+                CA, CPA, B.Com | Founder
               </div>
             </div>
           </div>
@@ -52,7 +52,7 @@ export default function AboutTeaser() {
               VSCPA is a young and dynamic enterprise providing offshore
               accounting services to US-based CPA, EA and advisory firms. We use
               the latest software and technology to ensure accurate, timely
-              financial data — so you can make informed decisions while we take
+              financial data, so you can make informed decisions while we take
               care of the rest.
             </p>
           </Reveal>

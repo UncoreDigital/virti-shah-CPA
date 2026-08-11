@@ -1,14 +1,14 @@
 /**
  * ============================================================================
- *  VIRTI SHAH CPA — CENTRAL FIRM DATA
+ *  VIRTI SHAH CPA, CENTRAL FIRM DATA
  * ============================================================================
  *  This is the SINGLE source of truth for every firm-specific fact used across
  *  the repositioned website (capacity numbers, certifications, team headcount,
  *  measurable outcomes, etc.).
  *
- *  ⚠️  ACTION REQUIRED — anything marked `TODO: CONFIRM` is a SAFE PLACEHOLDER,
+ *  ⚠️  ACTION REQUIRED, anything marked `TODO: CONFIRM` is a SAFE PLACEHOLDER,
  *      not a verified fact. Replace each with the firm's real figure before the
- *      site goes public. Nothing false is stated in the meantime — numbers are
+ *      site goes public. Nothing false is stated in the meantime, numbers are
  *      conservative and certification claims use "aligned with" language until
  *      you confirm a formal certificate exists (then flip `certified` to true
  *      and drop the "aligned with" wording).
@@ -18,19 +18,19 @@
  */
 
 /* ---------------------------------------------------------------------------
- *  POSITIONING — the one-line promise the site now leads with
+ *  POSITIONING, the one-line promise the site now leads with
  * ------------------------------------------------------------------------- */
 export const positioning = {
   headline: "Dedicated Offshore Audit & Assurance Professionals for U.S. CPA Firms",
   subhead:
-    "We work as a seamless extension of your engagement teams — scaling your assurance practice through busy season without adding partner overhead or sacrificing quality.",
+    "We work as a seamless extension of your engagement teams, scaling your assurance practice through busy season without adding partner overhead or sacrificing quality.",
   // Short value proposition used in nav CTAs and meta descriptions
   shortPitch:
     "Extend your audit practice without increasing partner overhead. Dedicated offshore audit teams integrated with your engagement methodology.",
 };
 
 /* ---------------------------------------------------------------------------
- *  CAPACITY STORY — the "how big / how deep are you" answer partners look for
+ *  CAPACITY STORY, the "how big / how deep are you" answer partners look for
  *  TODO: CONFIRM every number below.
  * ------------------------------------------------------------------------- */
 export type Stat = { value: string; label: string; sub?: string };
@@ -44,7 +44,7 @@ export const capacityStats: Stat[] = [
   { value: "100%", label: "On-site, secured operations" },
 ];
 
-// Team-composition / staffing-depth breakdown — CONFIRMED firm-wide headcount.
+// Team-composition / staffing-depth breakdown, CONFIRMED firm-wide headcount.
 export const teamComposition = {
   founder: { count: "1", label: "Founder" },
   managers: { count: "10+", label: "Managers" },
@@ -56,7 +56,7 @@ export const teamComposition = {
 };
 
 /* ---------------------------------------------------------------------------
- *  TAX & BOOKKEEPING PRACTICE — CONFIRMED data (provided by the tax team)
+ *  TAX & BOOKKEEPING PRACTICE, CONFIRMED data (provided by the tax team)
  * ------------------------------------------------------------------------- */
 export const taxBookkeeping = {
   stats: [
@@ -86,10 +86,10 @@ export const taxBookkeeping = {
     "Sales Tax Compliance",
   ],
   entityForms: [
-    "Individual — Form 1040",
-    "Partnership — Form 1065",
-    "S-Corp — Form 1120-S",
-    "C-Corp — Form 1120",
+    "Individual (Form 1040)",
+    "Partnership (Form 1065)",
+    "S-Corp (Form 1120-S)",
+    "C-Corp (Form 1120)",
     "Multi-state returns",
   ],
   // Industry-specific bookkeeping niches to feature
@@ -102,7 +102,7 @@ export const taxBookkeeping = {
 };
 
 /* ---------------------------------------------------------------------------
- *  AUDIT & ASSURANCE SERVICES — one entry per dedicated sub-page
+ *  AUDIT & ASSURANCE SERVICES, one entry per dedicated sub-page
  * ------------------------------------------------------------------------- */
 export type AuditService = {
   slug: string;
@@ -120,13 +120,13 @@ export const auditServices: AuditService[] = [
     slug: "financial-statement-audits",
     title: "Financial Statement Audits",
     short:
-      "Full-scope audit support for private and closely-held entities — planning, fieldwork, workpapers and reporting.",
+      "Full-scope audit support for private and closely-held entities: planning, fieldwork, workpapers and reporting.",
     metaDescription:
-      "Offshore financial statement audit support for U.S. CPA firms — planning, risk assessment, substantive testing, workpaper preparation and reporting under AICPA standards.",
+      "Offshore financial statement audit support for U.S. CPA firms: planning, risk assessment, substantive testing, workpaper preparation and reporting under AICPA standards.",
     intro:
       "End-to-end financial statement audit support that plugs directly into your engagement methodology.",
     paragraphs: [
-      "Our audit professionals support your financial statement engagements from planning through reporting — performing risk assessment, internal-control walkthroughs, substantive testing and workpaper documentation that ties out cleanly for partner review.",
+      "Our audit professionals support your financial statement engagements from planning through reporting, performing risk assessment, internal-control walkthroughs, substantive testing and workpaper documentation that ties out cleanly for partner review.",
       "We work within your firm's audit methodology and file structure (CaseWare, CCH, or your preferred platform), so deliverables arrive review-ready and in your house style rather than requiring rework.",
     ],
     scope: [
@@ -143,13 +143,13 @@ export const auditServices: AuditService[] = [
     slug: "nonprofit-audits",
     title: "Nonprofit Audits",
     short:
-      "Deep not-for-profit experience — net asset classification, functional expense, grants and donor-restriction testing.",
+      "Deep not-for-profit experience: net asset classification, functional expense, grants and donor-restriction testing.",
     metaDescription:
-      "Offshore nonprofit (NFP) audit support for U.S. CPA firms — net asset classification, functional expense allocation, grant compliance and Yellow Book considerations.",
+      "Offshore nonprofit (NFP) audit support for U.S. CPA firms: net asset classification, functional expense allocation, grant compliance and Yellow Book considerations.",
     intro:
       "Specialised support for not-for-profit engagements, where reporting nuances make experience matter.",
     paragraphs: [
-      "Not-for-profit audits carry reporting requirements that general audit staff often miss — net asset classification, functional expense allocation, contribution and grant revenue recognition, and donor-restriction tracking. Our team handles these day in and day out.",
+      "Not-for-profit audits carry reporting requirements that general audit staff often miss, net asset classification, functional expense allocation, contribution and grant revenue recognition, and donor-restriction tracking. Our team handles these day in and day out.",
       "We support both financial statement audits of nonprofits and the compliance layers that frequently accompany them, coordinating with your engagement team on Yellow Book and Single Audit considerations where applicable.",
     ],
     scope: [
@@ -166,14 +166,14 @@ export const auditServices: AuditService[] = [
     slug: "employee-benefit-plan-audits",
     title: "Employee Benefit Plan Audits",
     short:
-      "ERISA plan audits — 401(k), 403(b), pension and health & welfare — including the new SAS 136 requirements.",
+      "ERISA plan audits (401(k), 403(b), pension and health & welfare), including the new SAS 136 requirements.",
     metaDescription:
-      "Offshore employee benefit plan (EBP) audit support for U.S. CPA firms — ERISA 401(k), 403(b), pension and health & welfare plan audits under SAS 136.",
+      "Offshore employee benefit plan (EBP) audit support for U.S. CPA firms: ERISA 401(k), 403(b), pension and health & welfare plan audits under SAS 136.",
     intro:
       "ERISA employee benefit plan audit support, aligned to the current SAS 136 reporting framework.",
     paragraphs: [
       "Employee benefit plan audits are governed by complex ERISA regulations and the SAS 136 reporting model. Our professionals support 401(k), 403(b), defined-benefit pension, and health & welfare plan engagements with the specialised testing these plans demand.",
-      "We handle participant and contribution testing, benefit-payment testing, party-in-interest and prohibited-transaction procedures, and the SAS 136-specific documentation — all reviewed within your firm's quality framework.",
+      "We handle participant and contribution testing, benefit-payment testing, party-in-interest and prohibited-transaction procedures, and the SAS 136-specific documentation, all reviewed within your firm's quality framework.",
     ],
     scope: [
       "Participant data & eligibility testing",
@@ -191,7 +191,7 @@ export const auditServices: AuditService[] = [
     short:
       "HUD-assisted and multifamily housing audits under the HUD Consolidated Audit Guide.",
     metaDescription:
-      "Offshore HUD audit support for U.S. CPA firms — multifamily housing and HUD-assisted program audits under the HUD Consolidated Audit Guide and Uniform Guidance.",
+      "Offshore HUD audit support for U.S. CPA firms: multifamily housing and HUD-assisted program audits under the HUD Consolidated Audit Guide and Uniform Guidance.",
     intro:
       "Audit support for HUD-assisted programs and multifamily housing entities.",
     paragraphs: [
@@ -212,9 +212,9 @@ export const auditServices: AuditService[] = [
     slug: "single-audits",
     title: "Single Audits",
     short:
-      "Uniform Guidance single audits — major program determination, compliance and internal-control testing.",
+      "Uniform Guidance single audits: major program determination, compliance and internal-control testing.",
     metaDescription:
-      "Offshore Single Audit support for U.S. CPA firms — Uniform Guidance (2 CFR 200) major program determination, compliance requirements and SEFA reconciliation.",
+      "Offshore Single Audit support for U.S. CPA firms: Uniform Guidance (2 CFR 200) major program determination, compliance requirements and SEFA reconciliation.",
     intro:
       "Single Audit support under Uniform Guidance for entities expending federal awards.",
     paragraphs: [
@@ -235,9 +235,9 @@ export const auditServices: AuditService[] = [
     slug: "reviews",
     title: "Reviews",
     short:
-      "SSARS review engagements — analytical procedures, inquiry and limited-assurance documentation.",
+      "SSARS review engagements: analytical procedures, inquiry and limited-assurance documentation.",
     metaDescription:
-      "Offshore review engagement support for U.S. CPA firms — SSARS-compliant analytical procedures, inquiries and limited-assurance workpapers.",
+      "Offshore review engagement support for U.S. CPA firms: SSARS-compliant analytical procedures, inquiries and limited-assurance workpapers.",
     intro:
       "Review engagement support providing limited assurance under SSARS.",
     paragraphs: [
@@ -258,11 +258,11 @@ export const auditServices: AuditService[] = [
     slug: "compilations",
     title: "Compilations",
     short:
-      "SSARS compilation engagements — financial statement preparation without assurance.",
+      "SSARS compilation engagements: financial statement preparation without assurance.",
     metaDescription:
-      "Offshore compilation engagement support for U.S. CPA firms — SSARS-compliant financial statement preparation and presentation.",
+      "Offshore compilation engagement support for U.S. CPA firms: SSARS-compliant financial statement preparation and presentation.",
     intro:
-      "Compilation engagement support — accurate financial statement preparation under SSARS.",
+      "Compilation engagement support: accurate financial statement preparation under SSARS.",
     paragraphs: [
       "Compilation engagements present financial information in the form of financial statements without providing assurance. Our team prepares the statements, applies the appropriate reporting framework, and readies the file for your partner's compilation report.",
       "It's a cost-effective way to serve clients who need presentable statements, and a natural fit for offshore support that frees your staff for advisory work.",
@@ -283,11 +283,11 @@ export const auditServices: AuditService[] = [
     short:
       "Pre-audit prep and workpaper roll-forward so your fieldwork starts on day one, not week three.",
     metaDescription:
-      "Offshore audit preparation support for U.S. CPA firms — prior-year roll-forward, PBC schedules, lead sheets and trial balance setup that accelerate fieldwork.",
+      "Offshore audit preparation support for U.S. CPA firms: prior-year roll-forward, PBC schedules, lead sheets and trial balance setup that accelerate fieldwork.",
     intro:
       "Get engagements fieldwork-ready before your team logs in.",
     paragraphs: [
-      "A large share of every audit is preparation — rolling forward prior-year files, building lead sheets, setting up the trial balance, and chasing down PBC schedules. Offloading that work to us means your professional staff walk into fieldwork with a clean, organised file.",
+      "A large share of every audit is preparation, rolling forward prior-year files, building lead sheets, setting up the trial balance, and chasing down PBC schedules. Offloading that work to us means your professional staff walk into fieldwork with a clean, organised file.",
       "We prepare the file structure, populate the roll-forwards, and flag open items so your engagement team spends its hours on judgment and review rather than setup.",
     ],
     scope: [
@@ -303,74 +303,86 @@ export const auditServices: AuditService[] = [
 ];
 
 /* ---------------------------------------------------------------------------
- *  INDUSTRIES — specialization signal
+ *  INDUSTRIES, specialization signal
  * ------------------------------------------------------------------------- */
 export type Industry = { slug: string; name: string; blurb: string; icon: string };
+
+export const industriesPage = {
+  subtitle:
+    "Relevant industry experience across the audit, tax, bookkeeping and financial reporting work your firm assigns.",
+  intro:
+    "Every industry has distinct accounting cycles, tax considerations and reporting requirements. VSCPA brings relevant industry understanding to each assignment, helping your firm extend capacity across a diverse client portfolio with confidence.",
+  cta: {
+    eyebrow: "Industry-Specific Needs",
+    heading: "Does Your Firm Need Industry-Specific Capacity?",
+    body: "Tell us the industry, service line, expected volume and timing. We will define a practical starting scope for your firm.",
+  },
+};
 
 export const industries: Industry[] = [
   {
     slug: "nonprofit",
-    name: "Nonprofit & NGO",
+    name: "Nonprofit & Tax-Exempt Organizations",
     blurb:
-      "Net asset accounting, functional expense allocation, grant compliance and donor-restriction testing.",
+      "Fund accounting, grants, functional expense reporting, tax preparation, financial statements and audit preparation for nonprofit and tax-exempt organizations.",
     icon: "HeartHandshake",
   },
   {
     slug: "real-estate",
-    name: "Real Estate & HUD Housing",
+    name: "Real Estate & Property Management",
     blurb:
-      "Multifamily, affordable housing, CIRA and HUD-assisted entities — including REAC submission support.",
+      "Property-level accounting, reconciliations, reporting, tax preparation and audit preparation for multifamily, affordable and HUD-assisted housing.",
     icon: "Building2",
+  },
+  {
+    slug: "cira-hoa",
+    name: "CIRA, HOA & Condominium Associations",
+    blurb:
+      "Assessment income, member receivables, reserves, reporting, tax preparation and audit preparation for community associations.",
+    icon: "Home",
   },
   {
     slug: "healthcare",
     name: "Healthcare",
     blurb:
-      "Providers, clinics and health & welfare benefit plans with their distinct compliance requirements.",
+      "Revenue and receivables, payroll-related accounting, expense classification, financial reporting and tax preparation for healthcare organizations.",
     icon: "Stethoscope",
   },
   {
     slug: "manufacturing",
     name: "Manufacturing & Distribution",
     blurb:
-      "Inventory valuation, cost accounting and revenue recognition for product-based businesses.",
+      "Inventory, purchasing, cost accounting, revenue recognition, month-end close and financial reporting for product-based businesses.",
     icon: "Factory",
   },
   {
     slug: "construction",
-    name: "Construction & Real Property",
+    name: "Construction & Contractors",
     blurb:
-      "Percentage-of-completion, WIP schedules, job costing and surety-driven reporting.",
+      "Job costing, work-in-progress schedules, contract balances, tax preparation and financial reporting for contractors and construction businesses.",
     icon: "HardHat",
   },
   {
-    slug: "financial-institutions",
-    name: "Financial Institutions",
+    slug: "financial-services",
+    name: "Financial Services & Lending",
     blurb:
-      "Banks, credit unions and lenders with regulatory reporting and allowance testing needs.",
+      "Reconciliations, loan and investment schedules, interest activity, financial reporting, tax preparation and audit preparation for financial institutions and lenders.",
     icon: "Landmark",
   },
   {
     slug: "professional-services",
     name: "Professional Services",
     blurb:
-      "Firms and partnerships needing reliable reviews, compilations and benefit-plan audits.",
+      "Bookkeeping, billing, receivables, payroll, partner or member activity, tax preparation and financial reporting for professional-service firms.",
     icon: "Briefcase",
-  },
-  {
-    slug: "employee-benefit-plans",
-    name: "Employee Benefit Plans",
-    blurb:
-      "401(k), 403(b), pension and health & welfare plans under ERISA and SAS 136.",
-    icon: "Users",
   },
 ];
 
 /* ---------------------------------------------------------------------------
  *  SECURITY & COMPLIANCE
  *  ⚠️  This copy is deliberately framework-INFORMED, not framework-CERTIFIED.
- *      Wording is "designed with reference to" — never "aligned with",
- *      "compliant" or "certified" — and `frameworkDisclaimer` must stay on the
+ *      Wording is "designed with reference to", never "aligned with",
+ *      "compliant" or "certified", and `frameworkDisclaimer` must stay on the
  *      page alongside the framework cards. Do not reintroduce Certified /
  *      Aligned badges unless a real report exists to back the claim.
  * ------------------------------------------------------------------------- */
@@ -425,7 +437,7 @@ export const securityGroups: SecurityGroup[] = [
 ];
 
 /* ---------------------------------------------------------------------------
- *  MEET THE TEAM — scaffold. Swap placeholder people for real photos/bios.
+ *  MEET THE TEAM, scaffold. Swap placeholder people for real photos/bios.
  *  Photos should go in /public/assets/team/<file>. Using a shared placeholder
  *  until real headshots are supplied.
  * ------------------------------------------------------------------------- */
@@ -456,15 +468,7 @@ export const team: TeamMember[] = [
     credentials: "Enrolled Agent (EA)",
     experience: "10 yrs",
     photo: "/assets/team/krunal-ratadiya.jpeg",
-    bio: "IRS-licensed Enrolled Agent with 10 years of taxation experience, including more than 5 years dedicated exclusively to U.S. federal and multi-state tax compliance for U.S. CPA firms. He prepares and reviews returns across all major entity types — Forms 1040, 1065, 1120-S and 1120 — and oversees the quality review of all preparer work before partner sign-off, ensuring technical accuracy, compliance and consistency.",
-  },
-  {
-    name: "Jahnvi Prajapati",
-    role: "Tax Manager",
-    level: "Manager",
-    experience: "7+ yrs",
-    photo: "/assets/team/jahnvi-prajapati.jpeg",
-    bio: "Tax Manager with 7+ years of experience, including 5+ years serving U.S. CPA firms and 2 years in Indian taxation and audit. She prepares and reviews Forms 1040, 1065, 1120-S, 1120 and multi-state returns, and oversees preparer reviews before partner sign-off. Her experience includes nonprofit taxation and the Form 990 series (990, 990-EZ, 990-PF and 990-T), public support testing, functional expense allocation and unrelated business income (UBI) analysis.",
+    bio: "IRS-licensed Enrolled Agent with 10 years of taxation experience, including more than 5 years dedicated exclusively to U.S. federal and multi-state tax compliance for U.S. CPA firms. He prepares and reviews returns across all major entity types (Forms 1040, 1065, 1120-S and 1120), and oversees the quality review of all preparer work before partner sign-off, ensuring technical accuracy, compliance and consistency.",
   },
   {
     name: "Uttar Hingu",
@@ -492,7 +496,7 @@ export const teamCredentials = [
 ];
 
 /* ---------------------------------------------------------------------------
- *  CLIENT SUCCESS STORIES — measurable outcomes, not "great service".
+ *  CLIENT SUCCESS STORIES, measurable outcomes, not "great service".
  *  TODO: CONFIRM every metric. Keep anonymised ("a Top 50 CPA firm") unless
  *  you have written permission to name the client.
  * ------------------------------------------------------------------------- */
@@ -507,7 +511,7 @@ export const successStories: SuccessStory[] = [
   {
     metric: "300+",
     headline: "Nonprofit audits supported through busy season",
-    body: "Helped a Top 50 U.S. CPA firm complete over 300 nonprofit audits during a single busy season — absorbing peak workload without the firm adding local headcount.", // TODO: CONFIRM
+    body: "Helped a Top 50 U.S. CPA firm complete over 300 nonprofit audits during a single busy season, absorbing peak workload without the firm adding local headcount.", // TODO: CONFIRM
     tags: ["Nonprofit", "Busy season", "Capacity"],
   },
   {
@@ -525,7 +529,7 @@ export const successStories: SuccessStory[] = [
 ];
 
 /* ---------------------------------------------------------------------------
- *  TECHNOLOGY — audit-relevant platforms + existing software marquee.
+ *  TECHNOLOGY, audit-relevant platforms + existing software marquee.
  * ------------------------------------------------------------------------- */
 export type TechTool = { name: string; category: string; logo?: string };
 
@@ -563,12 +567,12 @@ export const techStack: TechTool[] = [
 ];
 
 /* ============================================================================
- *  FILL-IN CHECKLIST — remaining items (audit team / Virti)
+ *  FILL-IN CHECKLIST, remaining items (audit team / Virti)
  *  ----------------------------------------------------------------------------
  *  CONFIRMED (July 2026): teamComposition, taxBookkeeping, techStack,
  *  team[] (Virti/Krunal/Jahnvi), teamCredentials, capacityStats.
  *
- *  STILL PENDING — provided separately by Virti & the audit team:
+ *  STILL PENDING, provided separately by Virti & the audit team:
  *  [ ] compliance.soc.certified / iso.certified: true ONLY if a formal
  *      report/certificate exists (otherwise leave false = "aligned with")
  *  [ ] successStories[]: verify/replace every metric; permission before naming clients

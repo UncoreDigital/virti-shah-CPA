@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
             </h2>
             <p>
               We collect information you voluntarily provide through our contact
-              form — such as your name, email, firm name and message — solely to
+              form (such as your name, email, firm name and message) solely to
               respond to your enquiry and provide our services.
             </p>
             <h2 className="font-playfair text-2xl font-semibold text-primary">
@@ -58,7 +58,7 @@ export default function PrivacyPolicyPage() {
               .
             </p>
             <p className="text-sm text-muted-foreground">
-              This is a placeholder policy — please replace with your firm&apos;s
+              This is a placeholder policy, please replace with your firm&apos;s
               finalised legal text before launch.
             </p>
           </div>

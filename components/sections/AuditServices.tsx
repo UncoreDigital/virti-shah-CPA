@@ -11,7 +11,7 @@ export default function AuditServices() {
         <SectionHeading
           eyebrow="What We Do"
           title="Audit & Assurance Services"
-          subtitle="Dedicated support across the full assurance spectrum — each engagement type handled by professionals who do that work every day."
+          subtitle="Dedicated support across the full assurance spectrum, each engagement type handled by professionals who do that work every day."
         />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-16">

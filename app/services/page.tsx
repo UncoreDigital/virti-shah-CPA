@@ -39,7 +39,7 @@ export default function ServicesPage() {
     <>
       <PageBanner
         title="One Offshore Partner, Full Coverage"
-        subtitle="Audit & assurance, tax, independent review and accounting — delivered as an extension of your firm, under one quality standard."
+        subtitle="Audit & assurance, tax, independent review and accounting, delivered as an extension of your firm, under one quality standard."
         crumbs={[{ name: "Services", href: "/services" }]}
       />
 
@@ -113,7 +113,7 @@ export default function ServicesPage() {
             </Reveal>
             <Reveal delay={0.2}>
               <p className="font-inter text-slate">
-                An EA-led practice built to absorb your busy-season volume — with
+                An EA-led practice built to absorb your busy-season volume, with
                 a structured review process that protects quality at scale.
               </p>
             </Reveal>
@@ -139,7 +139,7 @@ export default function ServicesPage() {
           <Reveal>
             <div className="bg-card rounded-2xl p-8 shadow-elegant">
               <h3 className="font-playfair text-xl font-semibold text-primary mb-6 text-center">
-                Our review workflow — 3 levels before it reaches you
+                Our review workflow, 3 levels before it reaches you
               </h3>
               <div className="flex flex-col md:flex-row items-stretch justify-center gap-3">
                 {taxBookkeeping.reviewWorkflow.map((step, i) => (

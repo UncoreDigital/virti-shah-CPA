@@ -5,8 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, ArrowUpRight, Phone, Clock } from "lucide-react";
-import { navItems, site } from "@/lib/site";
+import { Menu, X, ChevronDown, ArrowUpRight, Phone } from "lucide-react";
+import { navItems, mobileNavItems, site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export default function Header() {
@@ -60,11 +60,7 @@ export default function Header() {
             exit={{ height: 0, opacity: 0, transition: { duration: 0.2 } }}
             className="hidden md:block bg-primary text-primary-foreground overflow-hidden"
           >
-            <div className="container-wide flex items-center justify-between py-2 text-xs font-inter">
-              <span className="flex items-center gap-2 text-primary-foreground/80">
-                <Clock className="w-3.5 h-3.5 text-gold" />
-                {site.hours}
-              </span>
+            <div className="container-wide flex items-center justify-end py-2 text-xs font-inter">
               <div className="flex items-center gap-5">
                 <a
                   href={site.phoneHref}
@@ -110,10 +106,11 @@ export default function Header() {
               <Link
                 href={item.href}
                 className={cn(
-                  "flex items-center gap-1 px-4 py-2 font-inter text-[15px] font-medium transition-colors whitespace-nowrap",
+                  "relative flex items-center gap-1 px-4 py-2 font-inter text-[15px] font-medium transition-colors whitespace-nowrap",
+                  "after:absolute after:left-4 after:right-4 after:-bottom-0.5 after:h-0.5 after:rounded-full after:bg-gold after:origin-left after:transition-transform after:duration-300",
                   isActive(item.href)
-                    ? "text-gold"
-                    : "text-foreground hover:text-gold"
+                    ? "text-gold after:scale-x-100"
+                    : "text-foreground hover:text-gold after:scale-x-0 hover:after:scale-x-100"
                 )}
               >
                 {item.name}
@@ -134,17 +131,20 @@ export default function Header() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.18 }}
-                    className="absolute top-full left-0 min-w-[220px] bg-white border border-border rounded-lg shadow-xl overflow-hidden py-2"
+                    className="absolute top-full left-0 pt-2 min-w-[248px]"
                   >
-                    {item.dropdown.map((d) => (
-                      <Link
-                        key={d.name}
-                        href={d.href}
-                        className="block px-5 py-2.5 text-sm font-inter text-foreground hover:bg-muted hover:text-gold transition-colors"
-                      >
-                        {d.name}
-                      </Link>
-                    ))}
+                    <div className="bg-white border border-border rounded-xl shadow-xl overflow-hidden py-2">
+                      {item.dropdown.map((d) => (
+                        <Link
+                          key={d.name}
+                          href={d.href}
+                          className="group/item flex items-center gap-2 px-5 py-2.5 text-sm font-inter text-foreground hover:bg-muted hover:text-gold transition-colors"
+                        >
+                          <span className="h-1 w-1 rounded-full bg-gold opacity-0 transition-opacity group-hover/item:opacity-100" />
+                          {d.name}
+                        </Link>
+                      ))}
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -154,7 +154,7 @@ export default function Header() {
 
         <div className="hidden lg:block">
           <Link href="/contact" className="btn-gold text-sm">
-            Book a Trial
+            {site.primaryCta}
             <ArrowUpRight className="w-4 h-4" />
           </Link>
         </div>
@@ -197,7 +197,7 @@ export default function Header() {
             </div>
 
             <nav className="flex-1 px-5 py-8 flex flex-col gap-5">
-              {navItems.map((item) => (
+              {mobileNavItems.map((item) => (
                 <div
                   key={item.name}
                   className="border-b border-border/40 pb-4 last:border-0"
@@ -253,7 +253,7 @@ export default function Header() {
                 onClick={() => setMobileOpen(false)}
                 className="btn-gold w-full justify-center mt-4 text-base py-4"
               >
-                Book a Trial
+                {site.primaryCta}
                 <ArrowUpRight className="w-5 h-5" />
               </Link>
             </nav>

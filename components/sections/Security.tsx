@@ -20,9 +20,9 @@ export default function Security() {
           <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
             Your data, fully protected
           </h2>
-          <p className="font-inter text-primary-foreground/70 leading-relaxed mb-6">
+          <p className="font-inter text-primary-foreground/85 leading-relaxed mb-6">
             We operate 100% on-site under strict, audited security controls,
-            aligned with SOC 2 and ISO 27001 practices — so your clients&apos;
+            aligned with SOC 2 and ISO 27001 practices, so your clients&apos;
             data stays confidential and compliant at every step.
           </p>
           <Link

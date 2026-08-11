@@ -43,9 +43,9 @@ export default function TeamTeaser() {
           <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-5">
             A real bench, not a solo practice
           </h2>
-          <p className="font-inter text-primary-foreground/70 leading-relaxed mb-8">
-            People buy people. Behind every engagement is a structured team —
-            partners, managers, seniors and staff — with the depth to absorb
+          <p className="font-inter text-primary-foreground/85 leading-relaxed mb-8">
+            People buy people. Behind every engagement is a structured team of
+            partners, managers, seniors and staff, with the depth to absorb
             your busy-season peaks and the review layers to protect quality.
           </p>
           <Link href="/team" className="btn-gold">
@@ -62,7 +62,7 @@ export default function TeamTeaser() {
                 <div className="font-playfair text-3xl font-bold text-primary-foreground mb-1">
                   {h.value}
                 </div>
-                <div className="font-inter text-sm text-primary-foreground/70 leading-snug">
+                <div className="font-inter text-sm text-primary-foreground/85 leading-snug">
                   {h.label}
                 </div>
               </div>

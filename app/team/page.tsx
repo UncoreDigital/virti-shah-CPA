@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: "Meet the Team & Capacity",
   description:
-    "The people and capacity behind Virti Shah CPA — partners, managers, seniors and audit staff, review depth, busy-season capacity and credentials that support U.S. CPA firms.",
+    "The people and capacity behind Virti Shah CPA: partners, managers, seniors and audit staff, review depth, busy-season capacity and credentials that support U.S. CPA firms.",
 };
 
 const capacityHighlights = [
@@ -54,7 +54,7 @@ export default function TeamPage() {
     <>
       <PageBanner
         title="Meet the Team & Our Capacity"
-        subtitle="People buy people. Here is the bench behind every engagement — and the capacity story that answers 'can you scale with us?'"
+        subtitle="People buy people. Here is the bench behind every engagement, and the capacity story that answers 'can you scale with us?'"
         crumbs={[{ name: "Meet the Team", href: "/team" }]}
       />
 
@@ -64,7 +64,7 @@ export default function TeamPage() {
           <SectionHeading
             eyebrow="Our Capacity"
             title="Depth that scales with your busy season"
-            subtitle="A structured, multi-level team — not a solo practitioner — built to absorb peak workload while protecting quality."
+            subtitle="A structured, multi-level team, not a solo practitioner, built to absorb peak workload while protecting quality."
           />
 
           {/* headline stats */}
@@ -116,7 +116,7 @@ export default function TeamPage() {
                     <div className="font-playfair text-3xl font-bold text-primary-foreground mb-1">
                       {h.value}
                     </div>
-                    <div className="font-inter text-xs text-primary-foreground/70 leading-snug">
+                    <div className="font-inter text-xs text-primary-foreground/85 leading-snug">
                       {h.label}
                     </div>
                   </div>
@@ -133,7 +133,7 @@ export default function TeamPage() {
           <SectionHeading
             eyebrow="Our People"
             title="Not just partners"
-            subtitle="Managers, seniors and audit staff — the professionals who actually execute your engagements."
+            subtitle="Managers, seniors and audit staff, the professionals who actually execute your engagements."
           />
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">

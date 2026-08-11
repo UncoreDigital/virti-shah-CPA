@@ -10,7 +10,7 @@ import { auditServices, positioning, capacityStats } from "@/lib/firm-data";
 export const metadata: Metadata = {
   title: "Audit & Assurance Services",
   description:
-    "Dedicated offshore audit & assurance support for U.S. CPA firms — financial statement, nonprofit, EBP, HUD, Single audits, reviews, compilations and audit preparation.",
+    "Dedicated offshore audit & assurance support for U.S. CPA firms: financial statement, nonprofit, EBP, HUD, Single audits, reviews, compilations and audit preparation.",
 };
 
 const pillars = [
@@ -22,7 +22,7 @@ const pillars = [
   {
     icon: Layers,
     title: "Your methodology",
-    body: "We work inside your audit approach and file structure — deliverables arrive review-ready.",
+    body: "We work inside your audit approach and file structure, deliverables arrive review-ready.",
   },
   {
     icon: ShieldCheck,
@@ -56,8 +56,8 @@ export default function AuditHubPage() {
             <p className="font-inter text-slate leading-relaxed">
               We are not a general accounting shop that also does audits. Audit
               and assurance is our specialisation. Our professionals support the
-              full engagement lifecycle — from planning and roll-forward through
-              testing, documentation and reporting — so your firm can take on
+              full engagement lifecycle, from planning and roll-forward through
+              testing, documentation and reporting, so your firm can take on
               more assurance work without stretching partner capacity.
             </p>
           </div>
@@ -123,7 +123,7 @@ export default function AuditHubPage() {
               <div className="font-playfair text-4xl font-bold text-gold mb-2">
                 {s.value}
               </div>
-              <div className="font-inter text-sm text-primary-foreground/70">
+              <div className="font-inter text-sm text-primary-foreground/85">
                 {s.label}
               </div>
             </div>

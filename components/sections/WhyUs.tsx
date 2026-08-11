@@ -19,7 +19,7 @@ export default function WhyUs() {
         <SectionHeading
           eyebrow="Why Us?"
           title="Why Firms Choose VSCPA"
-          subtitle="Cost reduction, increased ROI, access to skilled talent and a time-zone advantage — plus the peace of mind of a multi-level review process."
+          subtitle="Cost reduction, increased ROI, access to skilled talent and a time-zone advantage, plus the peace of mind of a multi-level review process."
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">

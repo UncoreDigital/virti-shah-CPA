@@ -11,7 +11,7 @@ export default function NotFound() {
         <h1 className="font-playfair text-2xl md:text-3xl font-semibold text-primary-foreground mb-3">
           Page not found
         </h1>
-        <p className="font-inter text-primary-foreground/70 mb-8 max-w-md mx-auto">
+        <p className="font-inter text-primary-foreground/85 mb-8 max-w-md mx-auto">
           The page you&apos;re looking for doesn&apos;t exist or has been moved.
         </p>
         <Link href="/" className="btn-gold">

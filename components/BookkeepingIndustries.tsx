@@ -10,7 +10,7 @@ export default function BookkeepingIndustries() {
           Industry-specific bookkeeping
         </h3>
         <p className="font-inter text-slate text-sm mb-6">
-          Deep, repeatable expertise in the niches your clients operate in — so
+          Deep, repeatable expertise in the niches your clients operate in, so
           the chart of accounts, KPIs and reporting fit the business.
         </p>
       </Reveal>

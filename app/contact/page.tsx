@@ -125,7 +125,7 @@ export default function ContactPage() {
             <div className="rounded-3xl overflow-hidden shadow-elegant-lg h-[400px]">
               <iframe
                 title="Virti Shah CPA Office Location"
-                src="https://www.google.com/maps?q=Span+Trade+Centre+Paldi+Ahmedabad&output=embed"
+                src="https://www.google.com/maps?q=Mauryansh+Elanza+Shyamal+Cross+Road+Ahmedabad+380015&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

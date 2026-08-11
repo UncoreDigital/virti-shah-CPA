@@ -82,7 +82,7 @@ export default function AuditServiceDetail({ data }: { data: AuditService }) {
                   <h3 className="font-playfair text-xl font-semibold text-primary-foreground mb-2">
                     Extend your audit team
                   </h3>
-                  <p className="font-inter text-sm text-primary-foreground/70 mb-5">
+                  <p className="font-inter text-sm text-primary-foreground/85 mb-5">
                     Add dedicated {data.title.toLowerCase()} capacity without
                     partner overhead.
                   </p>

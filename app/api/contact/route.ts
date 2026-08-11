@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-// Runs on the Node.js runtime (not edge) — required for the Resend SDK.
+// Runs on the Node.js runtime (not edge), required for the Resend SDK.
 export const runtime = "nodejs";
 
 type Payload = {
@@ -10,7 +10,7 @@ type Payload = {
   firm?: string;
   service?: string;
   message?: string;
-  // Honeypot — real users never fill this; bots often do.
+  // Honeypot, real users never fill this; bots often do.
   company_website?: string;
 };
 
@@ -85,8 +85,8 @@ export async function POST(req: Request) {
       label: "Email",
       value: `<a href="mailto:${escapeHtml(email)}" style="color:#245675;text-decoration:none">${escapeHtml(email)}</a>`,
     },
-    { label: "Firm / Company", value: escapeHtml(firm) || "—" },
-    { label: "Service of interest", value: escapeHtml(service) || "—" },
+    { label: "Firm / Company", value: escapeHtml(firm) || "Not provided" },
+    { label: "Service of interest", value: escapeHtml(service) || "Not provided" },
   ]
     .map(
       ({ label, value }) => `
@@ -161,17 +161,17 @@ export async function POST(req: Request) {
 </body>
 </html>`;
 
-  const text = `NEW WEBSITE ENQUIRY — Virti Shah CPA
+  const text = `NEW WEBSITE ENQUIRY | Virti Shah CPA
 
 Name: ${name}
 Email: ${email}
-Firm / Company: ${firm || "—"}
-Service of interest: ${service || "—"}
+Firm / Company: ${firm || "Not provided"}
+Service of interest: ${service || "Not provided"}
 
 Message:
 ${message}
 
-—
+-----
 Received ${received} (UTC)
 Reply to this email to respond to the lead directly.`;
 

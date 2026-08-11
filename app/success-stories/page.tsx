@@ -9,7 +9,7 @@ import { successStories } from "@/lib/firm-data";
 export const metadata: Metadata = {
   title: "Client Success Stories",
   description:
-    "Measurable outcomes for U.S. CPA firms — busy-season audit capacity, lower cost per engagement and faster fieldwork through Virti Shah CPA's offshore audit teams.",
+    "Measurable outcomes for U.S. CPA firms: busy-season audit capacity, lower cost per engagement and faster fieldwork through Virti Shah CPA's offshore audit teams.",
 };
 
 const messagingPoints = [
@@ -24,7 +24,7 @@ export default function SuccessStoriesPage() {
     <>
       <PageBanner
         title="Client Success Stories"
-        subtitle="Partners evaluate offshore providers on measurable impact — not adjectives. Here is the kind of result our teams deliver."
+        subtitle="Partners evaluate offshore providers on measurable impact, not adjectives. Here is the kind of result our teams deliver."
         crumbs={[{ name: "Client Success Stories", href: "/success-stories" }]}
       />
 

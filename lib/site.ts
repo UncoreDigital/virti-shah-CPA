@@ -10,6 +10,8 @@ export const site = {
   address: "Mauryansh Elanza, 202-203,Shyamal Cross Rd, Near parekh's hospital, Shyamal, Ahmedabad, Gujarat 380015",
   hours: "Mon – Sat | 10AM to 7PM | Closed Sunday",
   linkedin: "https://www.linkedin.com/in/virtishahcpa/",
+  /** Locked primary CTA label, used by the header, footer and every CTA band. */
+  primaryCta: "Schedule a Capacity Assessment",
 };
 
 export type NavItem = {
@@ -18,46 +20,43 @@ export type NavItem = {
   dropdown?: { name: string; href: string }[];
 };
 
+/**
+ * Primary navigation:
+ *   Home | Services | How We Work | Why VSCPA | Firm
+ * The copy document omits a desktop Home tab (the logo links home), but a Home
+ * item was requested explicitly, so it leads the list on desktop and mobile.
+ */
 export const navItems: NavItem[] = [
   { name: "Home", href: "/" },
   {
-    name: "Audit & Assurance",
-    href: "/services/audit",
+    name: "Services",
+    href: "/services",
     dropdown: [
-      { name: "Financial Statement Audits", href: "/services/audit/financial-statement-audits" },
-      { name: "Nonprofit Audits", href: "/services/audit/nonprofit-audits" },
-      { name: "Employee Benefit Plan Audits", href: "/services/audit/employee-benefit-plan-audits" },
-      { name: "HUD Audits", href: "/services/audit/hud-audits" },
-      { name: "Single Audits", href: "/services/audit/single-audits" },
-      { name: "Reviews", href: "/services/audit/reviews" },
-      { name: "Compilations", href: "/services/audit/compilations" },
-      { name: "Audit Preparation", href: "/services/audit/audit-preparation" },
+      { name: "Audit & Assurance", href: "/services/audit" },
+      { name: "Tax Services", href: "/services/tax-preparation" },
+      { name: "Independent Tax Review", href: "/services/independent-tax-review" },
+      { name: "Bookkeeping", href: "/services/bookkeeping" },
     ],
   },
+  { name: "How We Work", href: "/how-we-work" },
+  { name: "Why VSCPA", href: "/why-vscpa" },
   {
     name: "Firm",
     href: "/about",
     dropdown: [
       { name: "About Us", href: "/about" },
       { name: "Meet the Team & Capacity", href: "/team" },
-      { name: "Security & Compliance", href: "/security" },
       { name: "Industries", href: "/industries" },
-      { name: "Technology", href: "/software" },
+      { name: "Security & Technology", href: "/security" },
+      { name: "Technology & Platforms", href: "/software" },
       { name: "Client Success Stories", href: "/success-stories" },
+      { name: "Contact", href: "/contact" },
     ],
   },
-  {
-    name: "Services",
-    href: "/services",
-    dropdown: [
-      { name: "Audit & Assurance", href: "/services/audit" },
-      { name: "Tax Preparation", href: "/services/tax-preparation" },
-      { name: "Independent Tax Review", href: "/services/independent-tax-review" },
-      { name: "Bookkeeping & CAS", href: "/services/bookkeeping" },
-    ],
-  },
-  { name: "Contact", href: "/contact" },
 ];
+
+/** Mobile menu mirrors the desktop list (Home already leads it). */
+export const mobileNavItems: NavItem[] = navItems;
 
 export const services = [
   {
@@ -66,7 +65,7 @@ export const services = [
     title: "Audit & Assurance",
     icon: "/assets/icons/icon-service-03.png",
     teaser:
-      "Dedicated offshore audit support across financial statement, nonprofit, EBP, HUD, Single audits, reviews and compilations — working inside your engagement methodology.",
+      "Dedicated offshore audit support across financial statement, nonprofit, EBP, HUD, Single audits, reviews and compilations, working inside your engagement methodology.",
     note: "An audit is the highest level of assurance and it demands the same level of quality. We are an audit-specialised outsourcing partner, not a generalist.",
   },
   {
@@ -75,7 +74,7 @@ export const services = [
     title: "Tax Preparation",
     icon: "/assets/icons/icon-service-02.png",
     teaser:
-      "EA-led preparation of 2,000+ returns each season — 1040, 1065, 1120-S, 1120 and multi-state — with a structured 3-level review before partner sign-off.",
+      "EA-led preparation of 2,000+ returns each season (1040, 1065, 1120-S, 1120 and multi-state), with a structured 3-level review before partner sign-off.",
     note: "Led by IRS-licensed Enrolled Agents, so your firm can glide through busy season while we absorb the volume.",
   },
   {
@@ -84,8 +83,8 @@ export const services = [
     title: "Independent Tax Review",
     icon: "/assets/icons/icon-service-04.png",
     teaser:
-      "A standalone quality-review service — send us returns prepared by your own staff or another provider and we review them independently for accuracy and compliance.",
-    note: "500+ returns independently reviewed each year — a senior second-look, separate from the returns we prepare.",
+      "A standalone quality-review service, send us returns prepared by your own staff or another provider and we review them independently for accuracy and compliance.",
+    note: "500+ returns independently reviewed each year: a senior second-look, separate from the returns we prepare.",
   },
   {
     slug: "bookkeeping",
@@ -93,7 +92,7 @@ export const services = [
     title: "Bookkeeping & CAS",
     icon: "/assets/icons/icon-service-01.png",
     teaser:
-      "Bookkeeping, month-end close, Client Accounting Services, payroll and sales-tax compliance for 300+ monthly clients — with industry-specific expertise.",
+      "Bookkeeping, month-end close, Client Accounting Services, payroll and sales-tax compliance for 300+ monthly clients, with industry-specific expertise.",
     note: "A complete outsourced accounting function your firm can offer clients without adding internal staff.",
   },
 ];
@@ -114,7 +113,7 @@ export const softwareLogos = [
 export const whyUs = [
   {
     title: "Cost Savings",
-    body: "Offshore accounting teams often have lower labor costs, translating to significant savings — helping firms reduce operating expenses and increase profitability.",
+    body: "Offshore accounting teams often have lower labor costs, translating to significant savings, helping firms reduce operating expenses and increase profitability.",
   },
   {
     title: "Improved Efficiency",
@@ -142,12 +141,12 @@ export const workflow = [
   {
     step: "01",
     title: "Initial Consultation",
-    body: "We start by understanding your business, your accounting needs, and your pain points — determining whether we're the right fit and how we can help.",
+    body: "We start by understanding your business, your accounting needs, and your pain points, determining whether we're the right fit and how we can help.",
   },
   {
     step: "02",
     title: "Proposal & Engagement Letter",
-    body: "We provide a proposal and engagement letter outlining scope, timeline, fees, and terms — ensuring both parties are aligned before work begins.",
+    body: "We provide a proposal and engagement letter outlining scope, timeline, fees, and terms, ensuring both parties are aligned before work begins.",
   },
   {
     step: "03",
@@ -157,7 +156,7 @@ export const workflow = [
   {
     step: "04",
     title: "Onboarding",
-    body: "We onboard you onto our accounting systems — setting up software, chart of accounts, bank feeds, and accurately entering all data.",
+    body: "We onboard you onto our accounting systems, setting up software, chart of accounts, bank feeds, and accurately entering all data.",
   },
   {
     step: "05",
@@ -170,7 +169,7 @@ export const security = [
   "Latest-configuration workstations & centralized control",
   "VPN protection while working on client servers",
   "External plug-in devices disabled",
-  "100% on-site functioning — No WFH",
+  "100% on-site functioning (No WFH)",
   "Licensed support software only",
   "Password-protected, secured workstations",
   "Regular system audits",

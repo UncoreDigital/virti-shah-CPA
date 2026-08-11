@@ -9,7 +9,7 @@ import { getIcon } from "@/lib/icons";
 export const metadata: Metadata = {
   title: "Security & Compliance",
   description:
-    "How Virti Shah CPA handles client information — controlled access, company-managed workstations, on-site operations and documented confidentiality procedures, designed with reference to SOC 2 and ISO/IEC 27001 principles.",
+    "How Virti Shah CPA handles client information: controlled access, company-managed workstations, on-site operations and documented confidentiality procedures, designed with reference to SOC 2 and ISO/IEC 27001 principles.",
 };
 
 export default function SecurityPage() {
@@ -25,7 +25,7 @@ export default function SecurityPage() {
       {/* Security model */}
       <section className="section-padding">
         <div className="container-wide">
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="max-w-3xl mb-12">
             <p className="font-inter text-sm font-semibold uppercase tracking-[0.18em] text-gold mb-3">
               {securityModel.eyebrow}
             </p>
@@ -60,11 +60,11 @@ export default function SecurityPage() {
       {/* Framework-informed practices */}
       <section className="section-padding bg-muted">
         <div className="container-wide">
-          <p className="text-center font-inter text-sm font-semibold uppercase tracking-[0.18em] text-gold mb-10">
+          <p className="font-inter text-sm font-semibold uppercase tracking-[0.18em] text-gold mb-10">
             {compliance.eyebrow}
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl">
             {compliance.frameworks.map((f) => (
               <Reveal key={f.label}>
                 <div className="flex gap-4 bg-gradient-navy rounded-2xl p-7 h-full">
@@ -73,7 +73,7 @@ export default function SecurityPage() {
                     <h3 className="font-playfair text-xl font-semibold text-primary-foreground mb-1.5">
                       {f.label}
                     </h3>
-                    <p className="font-inter text-sm text-primary-foreground/70 leading-relaxed">
+                    <p className="font-inter text-sm text-primary-foreground/85 leading-relaxed">
                       {f.text}
                     </p>
                   </div>
@@ -82,7 +82,7 @@ export default function SecurityPage() {
             ))}
           </div>
 
-          <p className="mt-8 text-center max-w-4xl mx-auto font-inter text-xs text-slate leading-relaxed">
+          <p className="mt-8 max-w-4xl font-inter text-xs text-slate leading-relaxed">
             {compliance.frameworkDisclaimer}
           </p>
         </div>

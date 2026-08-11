@@ -9,7 +9,7 @@ import { techStack, type TechTool } from "@/lib/firm-data";
 export const metadata: Metadata = {
   title: "Technology & Software",
   description:
-    "The tax, bookkeeping, workflow and payroll platforms Virti Shah CPA works in — CCH Axcess, UltraTax, ProConnect, Lacerte, Drake, Karbon, Canopy, TaxDome, QuickBooks, Xero, ADP, Gusto, Bill.com and more.",
+    "The tax, bookkeeping, workflow and payroll platforms Virti Shah CPA works in: CCH Axcess, UltraTax, ProConnect, Lacerte, Drake, Karbon, Canopy, TaxDome, QuickBooks, Xero, ADP, Gusto, Bill.com and more.",
 };
 
 // Preserve category order as first seen in the data
@@ -33,7 +33,7 @@ export default function SoftwarePage() {
     <>
       <PageBanner
         title="Technology & Software"
-        subtitle="We work inside the platforms your firm already uses — so our output drops straight into your files, not a conversion queue."
+        subtitle="We work inside the platforms your firm already uses, so our output drops straight into your files, not a conversion queue."
         crumbs={[{ name: "Technology", href: "/software" }]}
       />
 
@@ -43,7 +43,7 @@ export default function SoftwarePage() {
             <p className="font-inter text-slate leading-relaxed">
               Our professionals are trained across the audit, tax and accounting
               software the U.S. profession runs on. Tell us your stack and we
-              staff engagements with people who already know it — reducing
+              staff engagements with people who already know it, reducing
               onboarding time and keeping deliverables in your house format.
             </p>
           </div>

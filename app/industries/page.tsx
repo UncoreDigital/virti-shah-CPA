@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import PageBanner from "@/components/PageBanner";
 import Reveal from "@/components/Reveal";
 import CTA from "@/components/sections/CTA";
-import { industries } from "@/lib/firm-data";
+import { industries, industriesPage } from "@/lib/firm-data";
 import { getIcon } from "@/lib/icons";
 
 export const metadata: Metadata = {
-  title: "Industries",
+  title: "Industries We Serve",
   description:
-    "Industry-specialised offshore audit support — nonprofit, HUD housing & real estate, healthcare, manufacturing, construction, financial institutions, professional services and employee benefit plans.",
+    "Relevant industry experience across nonprofit, real estate, CIRA and HOA, healthcare, manufacturing, construction, financial services and professional-services engagements.",
 };
 
 export default function IndustriesPage() {
@@ -16,7 +16,7 @@ export default function IndustriesPage() {
     <>
       <PageBanner
         title="Industries We Serve"
-        subtitle="Audit nuance lives in the industry. Our teams bring engagement-tested experience across the sectors your clients operate in."
+        subtitle={industriesPage.subtitle}
         crumbs={[{ name: "Industries", href: "/industries" }]}
       />
 
@@ -24,11 +24,7 @@ export default function IndustriesPage() {
         <div className="container-wide">
           <div className="max-w-3xl mb-14">
             <p className="font-inter text-slate leading-relaxed">
-              Different industries carry different audit risks, reporting
-              frameworks and compliance requirements. Assigning generalists to
-              specialised engagements is where quality slips. We staff your work
-              with professionals who already understand the sector — so testing
-              is sharper, review is faster, and surprises are fewer.
+              {industriesPage.intro}
             </p>
           </div>
 
@@ -57,7 +53,11 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      <CTA />
+      <CTA
+        eyebrow={industriesPage.cta.eyebrow}
+        heading={industriesPage.cta.heading}
+        body={industriesPage.cta.body}
+      />
     </>
   );
 }

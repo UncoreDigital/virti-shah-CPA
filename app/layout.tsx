@@ -20,7 +20,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Virti Shah CPA — Outsourced Accounting Solutions",
+    default: "Virti Shah CPA | Outsourced Accounting Solutions",
     template: "%s | Virti Shah CPA",
   },
   description:
