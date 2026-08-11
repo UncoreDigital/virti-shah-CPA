@@ -55,10 +55,10 @@ export const coreServices = {
       href: "/services/bookkeeping",
     },
     {
-      title: "Financial Reporting",
-      body: "Statements, schedules and management reporting support.",
-      icon: "FileSpreadsheet",
-      href: "/services",
+      title: "AI Implementation",
+      body: "Secure, human-reviewed AI adoption across audit, tax and accounting work.",
+      icon: "Sparkles",
+      href: "/services/ai-implementation",
     },
   ],
 };
@@ -178,11 +178,17 @@ export const technologyControls = {
   platforms: [
     { name: "CCH Axcess", logo: "/assets/software/cch-axcess.png" },
     { name: "CaseWare" },
+    { name: "Caseware Cloud" },
     { name: "QuickBooks", logo: "/assets/software/quickbooks.png" },
     { name: "Xero", logo: "/assets/software/xero.png" },
     { name: "Drake", logo: "/assets/software/drake.png" },
     { name: "ProFx", logo: "/assets/software/profx.png" },
     { name: "Lacerte", logo: "/assets/software/lacerte-new.png" },
+    { name: "Slack" },
+    { name: "Karbon" },
+    { name: "Monday.com" },
+    { name: "TaxDome" },
+    { name: "Canopy" },
   ] as { name: string; logo?: string }[],
 };
 

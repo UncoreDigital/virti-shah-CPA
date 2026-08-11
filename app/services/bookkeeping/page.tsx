@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import ServiceDetail from "@/components/ServiceDetail";
-import BookkeepingIndustries from "@/components/BookkeepingIndustries";
 import CTA from "@/components/sections/CTA";
 import { serviceDetails } from "@/lib/services-data";
 
@@ -14,10 +13,8 @@ export const metadata: Metadata = {
 export default function BookkeepingPage() {
   return (
     <>
-      <ServiceDetail data={data}>
-        <BookkeepingIndustries />
-      </ServiceDetail>
-      <CTA />
+      <ServiceDetail data={data} />
+      <CTA heading={data.cta?.heading} body={data.cta?.body} />
     </>
   );
 }

@@ -183,8 +183,8 @@ export default function Header() {
               <Image
                 src={site.logo}
                 alt="Virti Shah CPA"
-                width={150}
-                height={48}
+                width={187}
+                height={60}
                 className="h-11 w-auto object-contain"
               />
               <button

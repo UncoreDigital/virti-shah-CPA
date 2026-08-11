@@ -3,11 +3,19 @@ export type ServiceDetail = {
   title: string;
   metaDescription: string;
   image: string;
+  /** Supporting heading shown under the H1, above the hero copy. */
+  supportingHeading?: string;
   intro: string;
+  /** Optional heading above the body paragraphs. */
+  sectionHeading?: string;
   paragraphs: string[];
   listTitle: string;
   list: string[];
   highlight?: string;
+  /** Horizontal trust points. No statistics or numerical claims here. */
+  atAGlance?: { title: string; body: string; icon: string }[];
+  /** Page-specific closing CTA copy; falls back to the site default. */
+  cta?: { heading: string; body: string };
 };
 
 export const serviceDetails: Record<string, ServiceDetail> = {
@@ -15,14 +23,16 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     slug: "bookkeeping",
     title: "Bookkeeping & Client Accounting Services",
     metaDescription:
-      "Outsourced bookkeeping, month-end close, CAS, payroll and sales-tax compliance for U.S. CPA, EA and bookkeeping firms: 300+ monthly clients across QuickBooks, Xero and more.",
+      "Dependable bookkeeping, month-end close and Client Accounting Services for U.S. CPA, EA and accounting firms, delivered on an agreed recurring cadence within your systems and review process.",
     image: "/assets/services/bookkeeping.jpg",
+    supportingHeading: "Recurring Accounting Capacity, Built Around Your Firm",
     intro:
-      "Dedicated bookkeeping, month-end close and Client Accounting Services, supporting 300+ monthly clients for U.S. CPA, EA and bookkeeping firms.",
+      "Dependable bookkeeping, month-end close and Client Accounting Services for U.S. CPA, EA and accounting firms. Our professionals complete clearly defined recurring work on an agreed delivery cadence, while your firm retains the client relationship and final review.",
+    sectionHeading: "Recurring Accounting, Delivered Consistently",
     paragraphs: [
-      "We manage recurring bookkeeping and month-end close for 300+ monthly clients across CPA firms, EA firms and bookkeeping firms: reconciliations, AP/AR, payroll and management reporting delivered on a predictable monthly cadence.",
-      "Beyond core bookkeeping, we provide full Client Accounting Services (CAS), payroll processing and sales-tax compliance, so your firm can offer a complete outsourced accounting function to its clients without adding internal staff.",
-      "Our team works across QuickBooks Online and Desktop, Xero, Wave, Zoho Books and industry platforms such as Yardi and Rent Manager, plus payment and payroll tools including Bill.com, Gusto, ADP and Paychex, adapting to whatever stack your clients already run on.",
+      "Our professionals complete recurring bookkeeping and month-end close work for your firm's clients. Scope may include reconciliations, accounts payable and receivable, payroll preparation and management reporting.",
+      "Where included in the approved scope, assigned work may also include payroll processing and sales-tax preparation and filing.",
+      "Work is completed within your systems and review process. Your firm retains the client relationship and final oversight.",
     ],
     listTitle: "Our Accounting Services",
     list: [
@@ -34,33 +44,31 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Accounts Payable / Receivable",
       "Management Reporting",
     ],
-    highlight:
-      "300+ monthly bookkeeping clients across CPA, EA and bookkeeping firms, with industry-specific expertise.",
-  },
-  "tax-preparation": {
-    slug: "tax-preparation",
-    title: "Tax Preparation",
-    metaDescription:
-      "EA-led outsourced tax preparation for U.S. CPA firms: 2,000+ returns each season across Forms 1040, 1120-S, 1065, 1120 and multi-state, with a 3-level review process.",
-    image: "/assets/services/tax-preparation.jpg",
-    intro:
-      "IRS-licensed, EA-led tax preparation that scales your firm through busy season, over 2,000 returns each season.",
-    paragraphs: [
-      "Our tax practice is led by IRS-licensed Enrolled Agents (EAs) and prepares 2,000+ returns each season for U.S. CPA firms across individual, partnership, S-corp, C-corp and multi-state returns. Your firm takes on more work while we deliver accurate, review-ready output on time.",
-      "Every return moves through a structured, multi-level review (Preparer → Senior Reviewer → Tax Manager) before it reaches your CPA or partner for final sign-off. That process protects technical accuracy, compliance and consistency at volume, so nothing lands on a partner's desk unchecked.",
-      "You get dedicated capacity that works inside your software and your workflow (CCH Axcess, UltraTax, ProConnect, Lacerte, ProSeries, Drake and TaxAct), without the cost and hassle of scouting, evaluating and training seasonal staff.",
+    /* Per the developer instruction: three horizontal trust points, teal line
+       icons, and deliberately no statistics or numerical claims. */
+    atAGlance: [
+      {
+        title: "Recurring Delivery",
+        body: "An agreed monthly or recurring delivery cadence.",
+        icon: "CalendarDays",
+      },
+      {
+        title: "Defined CAS Scope",
+        body: "Bookkeeping, close and reporting work based on your requirements.",
+        icon: "ListChecks",
+      },
+      {
+        title: "Client-Firm Control",
+        body: "Your firm retains the client relationship and final review.",
+        icon: "Users",
+      },
     ],
-    listTitle: "Our Tax Services",
-    list: [
-      "Tax Preparation (1040, 1065, 1120-S, 1120)",
-      "Multi-state returns",
-      "Independent Tax Review",
-      "Tax Planning",
-      "IRS & State Notice Responses",
-      "Tax Advisory",
-    ],
-    highlight:
-      "Led by IRS-licensed Enrolled Agents (EAs). 2,000+ returns prepared each season through a 3-level review process.",
+    /* Closing CTA copy taken from the BK.png reference. That image is a design
+       reference only and is deliberately NOT reproduced as a layout. */
+    cta: {
+      heading: "Ready to Add Bookkeeping & CAS Capacity?",
+      body: "Tell us the approximate number of clients, expected cadence, current platforms and timing. We will confirm fit and outline a practical starting scope.",
+    },
   },
   "independent-tax-review": {
     slug: "independent-tax-review",

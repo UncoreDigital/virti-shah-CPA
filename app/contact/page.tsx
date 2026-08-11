@@ -16,6 +16,8 @@ const details = [
     icon: MapPin,
     label: "Office",
     value: site.address,
+    href: site.mapUrl,
+    external: true,
   },
   {
     icon: Phone,
@@ -81,6 +83,9 @@ export default function ContactPage() {
                       {d.href ? (
                         <a
                           href={d.href}
+                          {...(d.external
+                            ? { target: "_blank", rel: "noopener noreferrer" }
+                            : {})}
                           className="font-inter text-primary font-medium hover:text-gold transition-colors"
                         >
                           {d.value}
@@ -125,7 +130,7 @@ export default function ContactPage() {
             <div className="rounded-3xl overflow-hidden shadow-elegant-lg h-[400px]">
               <iframe
                 title="Virti Shah CPA Office Location"
-                src="https://www.google.com/maps?q=Mauryansh+Elanza+Shyamal+Cross+Road+Ahmedabad+380015&output=embed"
+                src={site.mapEmbed}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

@@ -11,8 +11,8 @@
     --card: 0 0% 100%;
     --card-foreground: 203 42% 18%;
 
-    /* Deep teal primary (logo "VS" — #235675) */
-    --primary: 203 53% 30%;
+    /* Brand dark blue — #1C4E6D */
+    --primary: 203 59% 27%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 200 16% 50%;
@@ -23,7 +23,7 @@
 
     /* Light blue / teal accent (logo wordmark — #3D8B95) */
     --accent: 188 44% 47%;
-    --accent-foreground: 203 53% 22%;
+    --accent-foreground: 203 59% 20%;
 
     --border: 200 24% 89%;
     --input: 200 24% 89%;
@@ -32,21 +32,21 @@
     --radius: 0.5rem;
 
     /* Brand tokens — names kept (navy/gold) but mapped to the teal-blue brand palette */
-    --navy: 203 53% 30%;
-    --navy-light: 201 45% 40%;
+    --navy: 203 59% 27%;
+    --navy-light: 201 50% 37%;
     --gold: 188 44% 47%;
     --gold-light: 190 46% 70%;
     /* Body-copy grey — darkened for contrast against white cards. */
     --slate: 202 18% 37%;
     --slate-light: 202 16% 72%;
 
-    --shadow-sm: 0 2px 8px -2px hsl(203 53% 30% / 0.08);
-    --shadow-md: 0 8px 24px -4px hsl(203 53% 30% / 0.12);
-    --shadow-lg: 0 16px 48px -8px hsl(203 53% 30% / 0.16);
-    --shadow-xl: 0 24px 64px -12px hsl(203 53% 30% / 0.2);
+    --shadow-sm: 0 2px 8px -2px hsl(203 59% 27% / 0.08);
+    --shadow-md: 0 8px 24px -4px hsl(203 59% 27% / 0.12);
+    --shadow-lg: 0 16px 48px -8px hsl(203 59% 27% / 0.16);
+    --shadow-xl: 0 24px 64px -12px hsl(203 59% 27% / 0.2);
     --shadow-gold: 0 8px 32px -8px hsl(188 44% 47% / 0.4);
 
-    --gradient-navy: linear-gradient(135deg, hsl(203 53% 30%) 0%, hsl(201 45% 40%) 100%);
+    --gradient-navy: linear-gradient(135deg, hsl(203 59% 27%) 0%, hsl(201 50% 37%) 100%);
     --gradient-gold: linear-gradient(135deg, hsl(188 48% 54%) 0%, hsl(191 52% 70%) 100%);
   }
 }

@@ -83,7 +83,7 @@ export async function POST(req: Request) {
     { label: "Name", value: escapeHtml(name) },
     {
       label: "Email",
-      value: `<a href="mailto:${escapeHtml(email)}" style="color:#245675;text-decoration:none">${escapeHtml(email)}</a>`,
+      value: `<a href="mailto:${escapeHtml(email)}" style="color:#1C4E6D;text-decoration:none">${escapeHtml(email)}</a>`,
     },
     { label: "Firm / Company", value: escapeHtml(firm) || "Not provided" },
     { label: "Service of interest", value: escapeHtml(service) || "Not provided" },
@@ -112,7 +112,7 @@ export async function POST(req: Request) {
 
           <!-- Header -->
           <tr>
-            <td style="background-color:#245675;background-image:linear-gradient(135deg,#245675 0%,#439fad 100%);padding:28px 32px">
+            <td style="background-color:#1C4E6D;background-image:linear-gradient(135deg,#1C4E6D 0%,#439fad 100%);padding:28px 32px">
               <p style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;color:#bfe3e8">Virti Shah CPA</p>
               <h1 style="margin:6px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:24px;font-weight:bold;color:#ffffff">New Website Enquiry</h1>
             </td>

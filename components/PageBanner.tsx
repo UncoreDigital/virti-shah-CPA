@@ -6,12 +6,15 @@ export default function PageBanner({
   title,
   subtitle,
   eyebrow,
+  tagline,
   crumbs = [],
 }: {
   /** ReactNode so a page can accent part of the heading. */
   title: ReactNode;
   subtitle?: string;
   eyebrow?: string;
+  /** Supporting heading rendered between the H1 and the subtitle. */
+  tagline?: string;
   /** Omit entirely to hide the breadcrumb row (the About page does). */
   crumbs?: { name: string; href: string }[];
 }) {
@@ -47,6 +50,11 @@ export default function PageBanner({
         <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-5">
           {title}
         </h1>
+        {tagline && (
+          <p className="font-playfair text-xl md:text-2xl text-gold-light mb-4">
+            {tagline}
+          </p>
+        )}
         {subtitle && (
           <p className="max-w-3xl font-inter text-primary-foreground/85 text-lg leading-relaxed">
             {subtitle}

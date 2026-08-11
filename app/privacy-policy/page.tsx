@@ -57,10 +57,6 @@ export default function PrivacyPolicyPage() {
               </a>
               .
             </p>
-            <p className="text-sm text-muted-foreground">
-              This is a placeholder policy, please replace with your firm&apos;s
-              finalised legal text before launch.
-            </p>
           </div>
         </div>
       </section>

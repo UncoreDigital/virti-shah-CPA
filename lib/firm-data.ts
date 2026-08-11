@@ -548,6 +548,7 @@ export const techStack: TechTool[] = [
   { name: "Canopy", category: "Workflow, CRM & Document Management" },
   { name: "TaxDome", category: "Workflow, CRM & Document Management" },
   { name: "Monday.com", category: "Workflow, CRM & Document Management" },
+  { name: "Slack", category: "Workflow, CRM & Document Management" },
   // Bookkeeping & Accounting
   { name: "QuickBooks Online", category: "Bookkeeping & Accounting", logo: "/assets/software/quickbooks.png" },
   { name: "QuickBooks Desktop", category: "Bookkeeping & Accounting", logo: "/assets/software/quickbooks.png" },
@@ -563,14 +564,18 @@ export const techStack: TechTool[] = [
   { name: "Bill.com", category: "Payroll & Payments" },
   { name: "Stripe", category: "Payroll & Payments" },
   { name: "PayPal", category: "Payroll & Payments" },
-  // NOTE: Audit & assurance working-paper platforms to be confirmed by the audit team.
+  // Audit & Assurance
+  { name: "CaseWare", category: "Audit & Assurance" },
+  { name: "Caseware Cloud", category: "Audit & Assurance" },
+  // NOTE: logo assets exist only for the tools carrying a `logo` path above.
+  // Tools without one fall back to a wordmark tile until artwork is supplied.
 ];
 
 /* ============================================================================
  *  FILL-IN CHECKLIST, remaining items (audit team / Virti)
  *  ----------------------------------------------------------------------------
  *  CONFIRMED (July 2026): teamComposition, taxBookkeeping, techStack,
- *  team[] (Virti/Krunal/Jahnvi), teamCredentials, capacityStats.
+ *  team[] (Virti/Krunal/Uttar/Akshat), teamCredentials, capacityStats.
  *
  *  STILL PENDING, provided separately by Virti & the audit team:
  *  [ ] compliance.soc.certified / iso.certified: true ONLY if a formal

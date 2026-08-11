@@ -16,6 +16,15 @@ import {
   ReceiptText,
   BookOpenCheck,
   FileSpreadsheet,
+  Sparkles,
+  CalendarDays,
+  ListChecks,
+  Search,
+  Blocks,
+  GraduationCap,
+  FileText,
+  User,
+  Globe,
   type LucideIcon,
 } from "lucide-react";
 
@@ -41,6 +50,15 @@ export const iconMap: Record<string, LucideIcon> = {
   ReceiptText,
   BookOpenCheck,
   FileSpreadsheet,
+  Sparkles,
+  CalendarDays,
+  ListChecks,
+  Search,
+  Blocks,
+  GraduationCap,
+  FileText,
+  User,
+  Globe,
 };
 
 export const getIcon = (name: string): LucideIcon => iconMap[name] ?? ShieldCheck;
