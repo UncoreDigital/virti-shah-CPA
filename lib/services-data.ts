@@ -116,7 +116,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "JE Testing & Sample Testing",
     ],
     highlight:
-      "An audit is the highest level of assurance, and it demands the same level of quality. We pride ourselves as an audit-specialised outsourcing firm.",
+      "An audit is the highest level of assurance, and it demands the same level of quality. We pride ourselves as an audit-specialized outsourcing firm.",
   },
 };
 

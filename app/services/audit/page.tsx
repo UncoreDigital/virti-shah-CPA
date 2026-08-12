@@ -5,6 +5,7 @@ import PageBanner from "@/components/PageBanner";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import CTA from "@/components/sections/CTA";
+import ProfessionalResponsibility from "@/components/ProfessionalResponsibility";
 import { auditServices, positioning, capacityStats } from "@/lib/firm-data";
 
 export const metadata: Metadata = {
@@ -22,12 +23,12 @@ const pillars = [
   {
     icon: Layers,
     title: "Your methodology",
-    body: "We work inside your audit approach and file structure, deliverables arrive review-ready.",
+    body: "We work within your audit approach and file structure so deliverables are organized for your review.",
   },
   {
     icon: ShieldCheck,
     title: "Secured operations",
-    body: "100% on-site, SOC 2 and ISO 27001-aligned controls protecting your clients' data.",
+    body: "100% on-site operations with documented security practices informed by relevant SOC 2 Trust Services Criteria and ISO/IEC 27001 principles.",
   },
 ];
 
@@ -47,18 +48,18 @@ export default function AuditHubPage() {
             <div className="flex items-center gap-3 mb-4">
               <div className="h-px w-12 bg-gold" />
               <span className="text-gold font-inter text-sm font-medium tracking-widest uppercase">
-                Audit-Specialised Outsourcing
+                Audit-Specialized Delivery
               </span>
             </div>
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-primary mb-5">
               An extension of your engagement teams
             </h2>
             <p className="font-inter text-slate leading-relaxed">
-              We are not a general accounting shop that also does audits. Audit
-              and assurance is our specialisation. Our professionals support the
-              full engagement lifecycle, from planning and roll-forward through
-              testing, documentation and reporting, so your firm can take on
-              more assurance work without stretching partner capacity.
+              Audit and assurance is a dedicated service line. Our
+              professionals support the full engagement lifecycle, from planning
+              and roll-forward through testing, documentation and reporting, so
+              your firm can take on more assurance work without stretching
+              partner capacity.
             </p>
           </div>
 
@@ -88,7 +89,7 @@ export default function AuditHubPage() {
           <SectionHeading
             eyebrow="Engagement Types"
             title="Our Audit & Assurance Services"
-            subtitle="Each engagement type is handled by professionals who do that work day in and day out."
+            subtitle="Assignments are matched with professionals who have relevant engagement experience."
           />
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
@@ -134,6 +135,12 @@ export default function AuditHubPage() {
             See our full capacity story
             <ArrowUpRight className="w-4 h-4" />
           </Link>
+        </div>
+      </section>
+
+      <section className="section-padding pb-0">
+        <div className="container-wide">
+          <ProfessionalResponsibility />
         </div>
       </section>
 

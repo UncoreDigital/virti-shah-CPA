@@ -49,22 +49,23 @@ export default function TechnologyControls() {
 
           <div className="relative mask-fade-edges">
             <div className="flex w-max animate-marquee gap-6">
+              {/* The supplied artwork is already a self-contained tile, so it
+                  is shown directly rather than nested inside another card. */}
               {rail.map((p, i) => (
                 <div
                   key={`${p.name}-${i}`}
-                  className="flex items-center justify-center bg-card rounded-xl shadow-elegant h-24 w-44 shrink-0 px-6"
+                  className="flex items-center justify-center h-28 w-28 shrink-0 rounded-2xl overflow-hidden"
                 >
                   {p.logo ? (
                     <Image
                       src={p.logo}
                       alt={p.name}
-                      width={140}
-                      height={56}
-                      unoptimized
-                      className="max-h-14 max-w-[8.5rem] w-auto object-contain opacity-85 hover:opacity-100 transition-opacity"
+                      width={180}
+                      height={180}
+                      className="h-full w-full object-contain"
                     />
                   ) : (
-                    <span className="font-playfair text-xl font-semibold text-primary/75">
+                    <span className="font-playfair text-lg font-semibold text-primary/75 text-center px-3">
                       {p.name}
                     </span>
                   )}

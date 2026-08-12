@@ -28,22 +28,17 @@ export default function GalleryPage() {
             title={gallery.sectionHeading}
           />
 
-          {/* Portrait shots take two rows so nothing is letterboxed. */}
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 auto-rows-[180px] sm:auto-rows-[210px] gap-4">
-            {gallery.photos.map((photo, i) => (
-              <Reveal
-                key={photo.src}
-                delay={(i % 4) * 0.05}
-                className={
-                  photo.orientation === "portrait" ? "row-span-2" : undefined
-                }
-              >
-                <div className="relative h-full w-full overflow-hidden rounded-2xl shadow-elegant group">
+          {/* Uniform square tiles: the count is divisible by 2, 3 and 4, so the
+              last row always fills and no empty blocks are left behind. */}
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {gallery.photos.map((src, i) => (
+              <Reveal key={src} delay={(i % 4) * 0.05}>
+                <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-elegant group">
                   <Image
-                    src={photo.src}
+                    src={src}
                     alt={`${gallery.altPrefix} photo ${i + 1}`}
                     fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                   />
                   <div className="absolute inset-0 bg-primary/0 transition-colors duration-300 group-hover:bg-primary/15" />

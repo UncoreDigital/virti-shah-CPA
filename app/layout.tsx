@@ -20,11 +20,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Virti Shah CPA | Outsourced Accounting Solutions",
+    default: "Virti Shah CPA | Audit, Tax, Bookkeeping & CAS for CPA Firms",
     template: "%s | Virti Shah CPA",
   },
   description:
-    "Affordable, reliable and quality outsourced accounting and offshore staffing solutions for US-based CPA, EA, Tax, Accounting and Advisory firms. Bookkeeping, Tax Preparation and Audit support.",
+    "Virti Shah CPA provides scalable audit, tax, bookkeeping and CAS capacity for CPA and accounting firms, with CPA, EA and CA leadership, three-tier quality review and integrated workflows.",
   keywords: [
     "outsourced accounting",
     "offshore accounting",

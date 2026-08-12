@@ -3,11 +3,10 @@
  *
  *  Source: "VSCPA_CIRA_Page_Copy_Paste_Simple.docx".
  *
- *  ⚠️  PUBLICATION STATUS: keep hidden and noindex until service-line approval.
- *      The page sets robots noindex/nofollow and is deliberately absent from
- *      `auditServices`, the header nav, the footer and every related-links
- *      list, so nothing on the site links to it. Do not add it to navigation
- *      or to `auditServices` until approval is confirmed in writing.
+ *  PUBLICATION STATUS: published. The earlier hidden/noindex hold was lifted by
+ *  the 13-08 instruction to list CIRA first in the Audit & Assurance grid, so
+ *  the noindex was removed and a listing entry added to `auditServices`
+ *  (flagged `ownPage` so the [slug] route does not also generate it).
  * ------------------------------------------------------------------------- */
 
 export const cira = {

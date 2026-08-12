@@ -170,25 +170,24 @@ export const technologyControls = {
   platformsLabel: "Common Platforms",
   /**
    * Management-approved platforms, shown as a scrolling logo rail.
-   * The source document's developer note asked for text labels *unless*
-   * approved logo assets are available; the logos were approved for use.
-   * Any platform without a `logo` asset falls back to a styled wordmark
-   * tile, so the rail stays uniform.
+   * Artwork comes from the supplied "Software Logo" set: the Front Page folder
+   * covers the platforms that previously had no asset; the rest reuse the
+   * matching category logo so the whole rail is one visual style.
    */
   platforms: [
-    { name: "CCH Axcess", logo: "/assets/software/cch-axcess.png" },
-    { name: "CaseWare" },
-    { name: "Caseware Cloud" },
-    { name: "QuickBooks", logo: "/assets/software/quickbooks.png" },
-    { name: "Xero", logo: "/assets/software/xero.png" },
-    { name: "Drake", logo: "/assets/software/drake.png" },
-    { name: "ProFx", logo: "/assets/software/profx.png" },
-    { name: "Lacerte", logo: "/assets/software/lacerte-new.png" },
-    { name: "Slack" },
-    { name: "Karbon" },
-    { name: "Monday.com" },
-    { name: "TaxDome" },
-    { name: "Canopy" },
+    { name: "CCH Axcess", logo: "/assets/software-logos/1-tax-preparation/cch-access-tax.png" },
+    { name: "CaseWare", logo: "/assets/software-logos/front-page/caseware.png" },
+    { name: "CaseWare Cloud", logo: "/assets/software-logos/front-page/caseware-cloud.png" },
+    { name: "QuickBooks", logo: "/assets/software-logos/3-bookkeeping-accounting/qb-online.png" },
+    { name: "Xero", logo: "/assets/software-logos/3-bookkeeping-accounting/xero.png" },
+    { name: "Drake", logo: "/assets/software-logos/1-tax-preparation/drake-tax.png" },
+    { name: "ProSystem fx", logo: "/assets/software-logos/1-tax-preparation/cch-prosystem-fx-tax.png" },
+    { name: "Lacerte", logo: "/assets/software-logos/1-tax-preparation/lacerte-tax.png" },
+    { name: "Slack", logo: "/assets/software-logos/front-page/slack.png" },
+    { name: "Karbon", logo: "/assets/software-logos/front-page/karbon.png" },
+    { name: "Monday.com", logo: "/assets/software-logos/front-page/monday-com.png" },
+    { name: "TaxDome", logo: "/assets/software-logos/front-page/taxdone.png" },
+    { name: "Canopy", logo: "/assets/software-logos/front-page/canopy.png" },
   ] as { name: string; logo?: string }[],
 };
 

@@ -7,7 +7,11 @@ import { auditServices } from "@/lib/firm-data";
 type Params = { params: { slug: string } };
 
 export function generateStaticParams() {
-  return auditServices.map((s) => ({ slug: s.slug }));
+  // Entries flagged `ownPage` have a hand-built route of their own, so this
+  // dynamic route must not also generate them.
+  return auditServices
+    .filter((s) => !s.ownPage)
+    .map((s) => ({ slug: s.slug }));
 }
 
 export function generateMetadata({ params }: Params): Metadata {

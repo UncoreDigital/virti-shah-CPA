@@ -3,16 +3,13 @@
  *
  *  Heading structure per the approved reference image
  *  ("ChatGPT Image Aug 11, 2026, 08_48_12 PM.png", docs/change-req-11-08).
- *  Photos are the firm's own, supplied in
- *  drive-download-20260811T185441Z-1-001.zip and downscaled to 1600px /
- *  quality 82 for the web (originals were ~4K, ~30MB in total).
+ *  Photos are the firm's own, downscaled to 1600px / quality 82 for the web.
+ *
+ *  COUNT MATTERS: the grid runs 2 / 3 / 4 columns, so the photo count is kept
+ *  divisible by all three (24) to leave no empty blocks on the last row. Per
+ *  the 13-08 instruction, photos may be added or removed to keep that true.
+ *  If you add photos, go to 30 or 36 rather than stopping at an awkward number.
  * ------------------------------------------------------------------------- */
-
-export type GalleryPhoto = {
-  src: string;
-  /** Orientation drives the masonry span, so tall shots are not letterboxed. */
-  orientation: "landscape" | "portrait";
-};
 
 export const gallery = {
   eyebrow: "Our Culture",
@@ -22,30 +19,12 @@ export const gallery = {
   sectionEyebrow: "Team Moments",
   sectionHeading: "Inside Our Culture",
 
-  /* Generic alt text: these are informal team photographs, and we have no
-     named identifications for the people in them. */
+  /* Generic alt text: these are informal team photographs and we have no named
+     identifications or event labels for them. */
   altPrefix: "Virti Shah CPA team",
 
-  photos: [
-    { src: "/assets/gallery/gallery-01.jpg", orientation: "landscape" },
-    { src: "/assets/gallery/gallery-02.jpg", orientation: "landscape" },
-    { src: "/assets/gallery/gallery-03.jpg", orientation: "landscape" },
-    { src: "/assets/gallery/gallery-04.jpg", orientation: "landscape" },
-    { src: "/assets/gallery/gallery-05.jpg", orientation: "landscape" },
-    { src: "/assets/gallery/gallery-06.jpg", orientation: "landscape" },
-    { src: "/assets/gallery/gallery-07.jpg", orientation: "portrait" },
-    { src: "/assets/gallery/gallery-08.jpg", orientation: "landscape" },
-    { src: "/assets/gallery/gallery-09.jpg", orientation: "landscape" },
-    { src: "/assets/gallery/gallery-10.jpg", orientation: "landscape" },
-    { src: "/assets/gallery/gallery-11.jpg", orientation: "landscape" },
-    { src: "/assets/gallery/gallery-12.jpg", orientation: "portrait" },
-    { src: "/assets/gallery/gallery-13.jpg", orientation: "landscape" },
-    { src: "/assets/gallery/gallery-14.jpg", orientation: "landscape" },
-    { src: "/assets/gallery/gallery-15.jpg", orientation: "landscape" },
-    { src: "/assets/gallery/gallery-16.jpg", orientation: "landscape" },
-    { src: "/assets/gallery/gallery-17.jpg", orientation: "landscape" },
-    { src: "/assets/gallery/gallery-18.jpg", orientation: "landscape" },
-    { src: "/assets/gallery/gallery-19.jpg", orientation: "portrait" },
-    { src: "/assets/gallery/gallery-20.jpg", orientation: "landscape" },
-  ] as GalleryPhoto[],
+  photos: Array.from(
+    { length: 24 },
+    (_, i) => `/assets/gallery/gallery-${String(i + 1).padStart(2, "0")}.jpg`
+  ),
 };

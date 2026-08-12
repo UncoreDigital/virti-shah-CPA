@@ -73,7 +73,7 @@ export const services = [
     icon: "/assets/icons/icon-service-03.png",
     teaser:
       "Dedicated offshore audit support across financial statement, nonprofit, EBP, HUD, Single audits, reviews and compilations, working inside your engagement methodology.",
-    note: "An audit is the highest level of assurance and it demands the same level of quality. We are an audit-specialised outsourcing partner, not a generalist.",
+    note: "An audit is the highest level of assurance and it demands the same level of quality. We are an audit-specialized outsourcing partner, not a generalist.",
   },
   {
     slug: "tax-preparation",

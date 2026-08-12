@@ -40,7 +40,7 @@ export type Stat = { value: string; label: string; sub?: string };
 export const capacityStats: Stat[] = [
   { value: "100+", label: "Professionals across audit, tax & bookkeeping" },
   { value: "3", label: "Levels of review before partner sign-off" },
-  { value: "EA & CPA", label: "IRS-licensed & CPA-led engagements" },
+  { value: "CPA, EA & CA Leadership", label: "Clear accountability throughout every engagement" },
   { value: "100%", label: "On-site, secured operations" },
 ];
 
@@ -113,9 +113,146 @@ export type AuditService = {
   paragraphs: string[];
   scope: string[]; // "What we handle" checklist
   standards?: string[]; // relevant standards / frameworks
+  /** True when the slug has a hand-built page instead of the [slug] route. */
+  ownPage?: boolean;
+};
+
+/**
+ * Required by the Audit & Assurance developer checklist: this statement must
+ * appear on the Audit hub AND every internal audit page. Wording matches the
+ * approved CIRA page copy. Do not remove from any audit page.
+ */
+export const professionalResponsibility = {
+  heading: "Professional Responsibility",
+  paragraphs: [
+    "Our firm performs assigned preparation, testing documentation, financial statement and completion tasks within the client CPA firm's methodology and review process.",
+    "The client CPA firm remains responsible for engagement acceptance and continuance, independence, planning decisions, risk assessment, materiality, professional judgments, supervision and review, client communications, evaluation of evidence, conclusions, report issuance and final sign-off.",
+  ],
 };
 
 export const auditServices: AuditService[] = [
+  {
+    /* Listed here so it appears in the Audit & Assurance grid and related
+       lists. It has its own bespoke page (app/services/audit/cira-hoa-condominium-audits),
+       so `ownPage` keeps the dynamic [slug] route from also generating it. */
+    slug: "cira-hoa-condominium-audits",
+    title: "CIRA, HOA & Condominium Audits",
+    short:
+      "Specialized audit capacity for condominium associations, homeowners' associations, cooperatives and other common-interest realty associations.",
+    metaDescription:
+      "Specialized CIRA, HOA and condominium audit capacity for CPA firms, including fund accounting, member assessments, reserves, workpapers and financial statements.",
+    intro:
+      "Specialized audit capacity for condominium associations, homeowners' associations, cooperatives and other common-interest realty association engagements.",
+    paragraphs: [
+      "Our professionals work with U.S. CPA firms to prepare assigned workpapers, testing schedules, financial statements and completion tasks for common-interest realty association engagements.",
+    ],
+    scope: [
+      "Operating, Replacement Reserve & Special-Assessment Funds",
+      "Member Assessments & Ancillary Revenue",
+      "Reserve-Study Reconciliation & Future Major Repairs",
+      "Interfund Balances, Transfers & Restricted Cash",
+      "Operating Expenses, Liabilities & Major Repair Projects",
+      "Fund-Based Financial Statements & Supplementary Information",
+    ],
+    standards: [
+      "FASB ASC 972",
+      "AICPA Audit and Accounting Guide - Common Interest Realty Associations",
+      "Applicable State Requirements",
+    ],
+    ownPage: true,
+  },
+  {
+    slug: "nonprofit-audits",
+    title: "Nonprofit Audits",
+    short:
+      "Deep not-for-profit experience: net asset classification, functional expense, grants and donor-restriction testing.",
+    metaDescription:
+      "Offshore nonprofit (NFP) audit support for U.S. CPA firms: net asset classification, functional expense allocation, grant compliance and Yellow Book considerations.",
+    intro:
+      "Specialized support for not-for-profit engagements, where reporting nuances make experience matter.",
+    paragraphs: [
+      "Not-for-profit engagements require focused attention to net asset classification, functional expense allocation, contribution and grant revenue recognition, and donor-restriction tracking. Our professionals have relevant experience with these areas.",
+      "We support both financial statement audits of nonprofits and the compliance layers that frequently accompany them, coordinating with your engagement team on Yellow Book and Single Audit considerations where applicable.",
+    ],
+    scope: [
+      "Net asset classification & roll-forwards",
+      "Functional expense allocation testing",
+      "Contribution & grant revenue recognition",
+      "Donor-restriction & endowment testing",
+      "Statement of functional expenses",
+      "Yellow Book / Single Audit coordination",
+    ],
+    standards: ["AICPA (GAAS)", "FASB not-for-profit reporting, and GASB when applicable to a governmental entity", "Government Auditing Standards (Yellow Book)"],
+  },
+  {
+    slug: "employee-benefit-plan-audits",
+    title: "Employee Benefit Plan Audits",
+    short:
+      "ERISA plan audit support for 401(k), 403(b), pension, and health and welfare plans, including applicable SAS No. 136 requirements.",
+    metaDescription:
+      "Offshore employee benefit plan (EBP) audit support for U.S. CPA firms: ERISA 401(k), 403(b), pension and health & welfare plan audits under SAS 136.",
+    intro:
+      "ERISA employee benefit plan audit support, aligned to the current SAS 136 reporting framework.",
+    paragraphs: [
+      "Employee benefit plan audits are governed by complex ERISA regulations and the SAS 136 reporting model. Our professionals support 401(k), 403(b), defined-benefit pension, and health & welfare plan engagements with the specialized testing these plans demand.",
+      "We handle participant and contribution testing, benefit-payment testing, party-in-interest and prohibited-transaction procedures, and the SAS 136-specific documentation, all reviewed within your firm's quality framework.",
+    ],
+    scope: [
+      "Participant data & eligibility testing",
+      "Contribution & remittance testing",
+      "Benefit payment & distribution testing",
+      "Investment & fair-value testing",
+      "Party-in-interest / prohibited transactions",
+      "ERISA & SAS 136 reporting support",
+    ],
+    standards: ["AICPA (GAAS)", "ERISA", "SAS No. 136"],
+  },
+  {
+    slug: "hud-audits",
+    title: "HUD Audits",
+    short:
+      "HUD-assisted and multifamily housing audits under the HUD Consolidated Audit Guide.",
+    metaDescription:
+      "Offshore HUD audit support for U.S. CPA firms: multifamily housing and HUD-assisted program audits under the HUD Consolidated Audit Guide and Uniform Guidance.",
+    intro:
+      "Audit support for HUD-assisted programs and multifamily housing entities.",
+    paragraphs: [
+      "Organizations receiving Department of Housing and Urban Development funding face a distinct compliance and reporting regime. Our team has hands-on experience with the HUD Consolidated Audit Guide, FASS-MF submission, and the compliance requirements unique to HUD engagements.",
+      "We prepare the financial and compliance workpapers, perform the required program testing, and assemble the templates your engagement team needs for on-time REAC filing.",
+    ],
+    scope: [
+      "HUD Consolidated Audit Guide compliance",
+      "Multifamily housing project testing",
+      "FASS-MF submission templates",
+      "Compliance & internal control testing",
+      "Mortgagor / owner certification support",
+      "Uniform Guidance coordination",
+    ],
+    standards: ["HUD Consolidated Audit Guide", "Uniform Guidance (2 CFR 200)", "Yellow Book"],
+  },
+  {
+    slug: "single-audits",
+    title: "Single Audits",
+    short:
+      "Uniform Guidance single audits: major program determination, compliance and internal-control testing.",
+    metaDescription:
+      "Offshore Single Audit support for U.S. CPA firms: Uniform Guidance (2 CFR 200) major program determination, compliance requirements and SEFA reconciliation.",
+    intro:
+      "Single Audit support under Uniform Guidance for entities expending federal awards.",
+    paragraphs: [
+      "Entities receiving federal awards may be subject to Single Audit requirements under the Uniform Guidance. The client CPA firm determines whether a Single Audit is required and retains responsibility for engagement acceptance, professional judgment, final review and report issuance. Our professionals complete clearly assigned procedures within the firm's methodology and review process.",
+      "We support major program determination, Schedule of Expenditures of Federal Awards (SEFA) reconciliation, compliance-requirement testing, and the internal-control-over-compliance procedures that define a defensible Single Audit file.",
+    ],
+    scope: [
+      "SEFA preparation & reconciliation",
+      "Major program determination",
+      "Testing of applicable compliance requirements",
+      "Internal control over compliance",
+      "Data Collection Form (SF-SAC) support",
+      "Findings & questioned-cost documentation",
+    ],
+    standards: ["Uniform Guidance (2 CFR 200)", "Government Auditing Standards (Yellow Book)"],
+  },
   {
     slug: "financial-statement-audits",
     title: "Financial Statement Audits",
@@ -140,154 +277,16 @@ export const auditServices: AuditService[] = [
     standards: ["AICPA (GAAS)", "U.S. GAAP"],
   },
   {
-    slug: "nonprofit-audits",
-    title: "Nonprofit Audits",
-    short:
-      "Deep not-for-profit experience: net asset classification, functional expense, grants and donor-restriction testing.",
-    metaDescription:
-      "Offshore nonprofit (NFP) audit support for U.S. CPA firms: net asset classification, functional expense allocation, grant compliance and Yellow Book considerations.",
-    intro:
-      "Specialised support for not-for-profit engagements, where reporting nuances make experience matter.",
-    paragraphs: [
-      "Not-for-profit audits carry reporting requirements that general audit staff often miss, net asset classification, functional expense allocation, contribution and grant revenue recognition, and donor-restriction tracking. Our team handles these day in and day out.",
-      "We support both financial statement audits of nonprofits and the compliance layers that frequently accompany them, coordinating with your engagement team on Yellow Book and Single Audit considerations where applicable.",
-    ],
-    scope: [
-      "Net asset classification & roll-forwards",
-      "Functional expense allocation testing",
-      "Contribution & grant revenue recognition",
-      "Donor-restriction & endowment testing",
-      "Statement of functional expenses",
-      "Yellow Book / Single Audit coordination",
-    ],
-    standards: ["AICPA (GAAS)", "GASB / FASB NFP", "Government Auditing Standards (Yellow Book)"],
-  },
-  {
-    slug: "employee-benefit-plan-audits",
-    title: "Employee Benefit Plan Audits",
-    short:
-      "ERISA plan audits (401(k), 403(b), pension and health & welfare), including the new SAS 136 requirements.",
-    metaDescription:
-      "Offshore employee benefit plan (EBP) audit support for U.S. CPA firms: ERISA 401(k), 403(b), pension and health & welfare plan audits under SAS 136.",
-    intro:
-      "ERISA employee benefit plan audit support, aligned to the current SAS 136 reporting framework.",
-    paragraphs: [
-      "Employee benefit plan audits are governed by complex ERISA regulations and the SAS 136 reporting model. Our professionals support 401(k), 403(b), defined-benefit pension, and health & welfare plan engagements with the specialised testing these plans demand.",
-      "We handle participant and contribution testing, benefit-payment testing, party-in-interest and prohibited-transaction procedures, and the SAS 136-specific documentation, all reviewed within your firm's quality framework.",
-    ],
-    scope: [
-      "Participant data & eligibility testing",
-      "Contribution & remittance testing",
-      "Benefit payment & distribution testing",
-      "Investment & fair-value testing",
-      "Party-in-interest / prohibited transactions",
-      "ERISA & SAS 136 reporting support",
-    ],
-    standards: ["AICPA (GAAS)", "ERISA", "SAS 136"],
-  },
-  {
-    slug: "hud-audits",
-    title: "HUD Audits",
-    short:
-      "HUD-assisted and multifamily housing audits under the HUD Consolidated Audit Guide.",
-    metaDescription:
-      "Offshore HUD audit support for U.S. CPA firms: multifamily housing and HUD-assisted program audits under the HUD Consolidated Audit Guide and Uniform Guidance.",
-    intro:
-      "Audit support for HUD-assisted programs and multifamily housing entities.",
-    paragraphs: [
-      "Organizations receiving Department of Housing and Urban Development funding face a distinct compliance and reporting regime. Our team has hands-on experience with the HUD Consolidated Audit Guide, REAC electronic submission, and the compliance requirements unique to HUD engagements.",
-      "We prepare the financial and compliance workpapers, perform the required program testing, and assemble the templates your engagement team needs for on-time REAC filing.",
-    ],
-    scope: [
-      "HUD Consolidated Audit Guide compliance",
-      "Multifamily housing project testing",
-      "REAC / FASS electronic submission templates",
-      "Compliance & internal control testing",
-      "Mortgagor / owner certification support",
-      "Uniform Guidance coordination",
-    ],
-    standards: ["HUD Consolidated Audit Guide", "Uniform Guidance (2 CFR 200)", "Yellow Book"],
-  },
-  {
-    slug: "single-audits",
-    title: "Single Audits",
-    short:
-      "Uniform Guidance single audits: major program determination, compliance and internal-control testing.",
-    metaDescription:
-      "Offshore Single Audit support for U.S. CPA firms: Uniform Guidance (2 CFR 200) major program determination, compliance requirements and SEFA reconciliation.",
-    intro:
-      "Single Audit support under Uniform Guidance for entities expending federal awards.",
-    paragraphs: [
-      "Entities that expend $750,000 or more in federal awards require a Single Audit under Uniform Guidance. These engagements layer compliance testing on top of the financial statement audit and demand precise documentation.",
-      "We support major program determination, Schedule of Expenditures of Federal Awards (SEFA) reconciliation, compliance-requirement testing, and the internal-control-over-compliance procedures that define a defensible Single Audit file.",
-    ],
-    scope: [
-      "SEFA preparation & reconciliation",
-      "Major program determination",
-      "Compliance requirement testing (12 areas)",
-      "Internal control over compliance",
-      "Data Collection Form (SF-SAC) support",
-      "Findings & questioned-cost documentation",
-    ],
-    standards: ["Uniform Guidance (2 CFR 200)", "Government Auditing Standards (Yellow Book)"],
-  },
-  {
-    slug: "reviews",
-    title: "Reviews",
-    short:
-      "SSARS review engagements: analytical procedures, inquiry and limited-assurance documentation.",
-    metaDescription:
-      "Offshore review engagement support for U.S. CPA firms: SSARS-compliant analytical procedures, inquiries and limited-assurance workpapers.",
-    intro:
-      "Review engagement support providing limited assurance under SSARS.",
-    paragraphs: [
-      "Review engagements provide limited assurance and rely on analytical procedures and inquiry rather than the extensive testing of an audit. Our team prepares the analytics, documents the inquiries, and assembles the workpapers your firm needs to issue the review report.",
-      "We help you deliver reviews efficiently and profitably, freeing your professional staff to focus on client relationships and higher-assurance work.",
-    ],
-    scope: [
-      "Analytical procedures & ratio analysis",
-      "Inquiry documentation",
-      "Financial statement drafting",
-      "Disclosure checklists",
-      "Management representation coordination",
-      "Review workpaper assembly",
-    ],
-    standards: ["SSARS 21+ (AR-C 90)"],
-  },
-  {
-    slug: "compilations",
-    title: "Compilations",
-    short:
-      "SSARS compilation engagements: financial statement preparation without assurance.",
-    metaDescription:
-      "Offshore compilation engagement support for U.S. CPA firms: SSARS-compliant financial statement preparation and presentation.",
-    intro:
-      "Compilation engagement support: accurate financial statement preparation under SSARS.",
-    paragraphs: [
-      "Compilation engagements present financial information in the form of financial statements without providing assurance. Our team prepares the statements, applies the appropriate reporting framework, and readies the file for your partner's compilation report.",
-      "It's a cost-effective way to serve clients who need presentable statements, and a natural fit for offshore support that frees your staff for advisory work.",
-    ],
-    scope: [
-      "Financial statement preparation",
-      "Framework application (GAAP / cash / tax basis)",
-      "Note disclosures",
-      "Trial balance & adjusting entries",
-      "Presentation formatting",
-      "Compilation report support",
-    ],
-    standards: ["SSARS 21+ (AR-C 80)"],
-  },
-  {
     slug: "audit-preparation",
     title: "Audit Preparation",
     short:
-      "Pre-audit prep and workpaper roll-forward so your fieldwork starts on day one, not week three.",
+      "Pre-audit preparation and workpaper roll-forward to help your engagement team begin fieldwork with an organized file.",
     metaDescription:
       "Offshore audit preparation support for U.S. CPA firms: prior-year roll-forward, PBC schedules, lead sheets and trial balance setup that accelerate fieldwork.",
     intro:
       "Get engagements fieldwork-ready before your team logs in.",
     paragraphs: [
-      "A large share of every audit is preparation, rolling forward prior-year files, building lead sheets, setting up the trial balance, and chasing down PBC schedules. Offloading that work to us means your professional staff walk into fieldwork with a clean, organised file.",
+      "A large share of every audit is preparation: rolling forward prior-year files, building lead sheets, setting up the trial balance, and coordinating client-prepared schedules and supporting documentation. Assigning this work to our professionals helps your engagement team begin fieldwork with an organized file.",
       "We prepare the file structure, populate the roll-forwards, and flag open items so your engagement team spends its hours on judgment and review rather than setup.",
     ],
     scope: [
@@ -299,6 +298,52 @@ export const auditServices: AuditService[] = [
       "Open-items tracking for fieldwork",
     ],
     standards: ["Firm-specific methodology"],
+  },
+  {
+    slug: "reviews",
+    title: "Reviews",
+    short:
+      "SSARS review engagements: analytical procedures, inquiry and limited-assurance documentation.",
+    metaDescription:
+      "Offshore review engagement support for U.S. CPA firms: SSARS-compliant analytical procedures, inquiries and limited-assurance workpapers.",
+    intro:
+      "Review engagement support providing limited assurance under SSARS.",
+    paragraphs: [
+      "Review engagements provide limited assurance and rely on analytical procedures and inquiry rather than the extensive testing of an audit. Our professionals prepare analytical schedules, support inquiry documentation, and assemble workpapers for your firm's review and report issuance.",
+      "We help you deliver reviews efficiently and profitably, freeing your professional staff to focus on client relationships and higher-assurance work.",
+    ],
+    scope: [
+      "Analytical procedures & ratio analysis",
+      "Inquiry documentation",
+      "Financial statement drafting",
+      "Disclosure checklists",
+      "Management representation coordination",
+      "Review workpaper assembly",
+    ],
+    standards: ["AR-C Section 90, Review of Financial Statements"],
+  },
+  {
+    slug: "compilations",
+    title: "Compilations",
+    short:
+      "SSARS compilation engagements: financial statement preparation without assurance.",
+    metaDescription:
+      "Offshore compilation engagement support for U.S. CPA firms: SSARS-compliant financial statement preparation and presentation.",
+    intro:
+      "Compilation engagement support: accurate financial statement preparation under SSARS.",
+    paragraphs: [
+      "Compilation engagements present financial information in the form of financial statements without providing assurance. Our professionals assist with financial statement preparation, application of the selected reporting framework, and file organization for your firm's final review and compilation report.",
+      "It's a cost-effective way to serve clients who need presentable statements, and a natural fit for offshore support that frees your staff for advisory work.",
+    ],
+    scope: [
+      "Financial statement preparation",
+      "Framework application (GAAP / cash / tax basis)",
+      "Note disclosures",
+      "Trial balance & adjusting entries",
+      "Presentation formatting",
+      "Compilation report support",
+    ],
+    standards: ["AR-C Section 80, Compilation Engagements"],
   },
 ];
 
@@ -459,7 +504,7 @@ export const team: TeamMember[] = [
     credentials: "CPA", // TODO: CONFIRM additional credentials if any
     experience: "12+ yrs", // TODO: CONFIRM
     photo: "/assets/founder/virti-shah.jpeg",
-    bio: "Virti Shah is a U.S. Certified Public Accountant and the founder of Virti Shah CPA. She built the firm as a specialised offshore partner to U.S. accounting firms, leading its audit, assurance and tax practice and shaping the multi-level review process that underpins every engagement. She works closely with U.S. CPA firms to extend their capacity through busy season while protecting the quality standards their clients expect.", // TODO: refine with founder's own wording
+    bio: "Virti Shah is a U.S. Certified Public Accountant and the founder of Virti Shah CPA. She built the firm as a specialized offshore partner to U.S. accounting firms, leading its audit, assurance and tax practice and shaping the multi-level review process that underpins every engagement. She works closely with U.S. CPA firms to extend their capacity through busy season while protecting the quality standards their clients expect.", // TODO: refine with founder's own wording
   },
   {
     name: "Krunal Ratadiya, EA",
@@ -535,40 +580,54 @@ export type TechTool = { name: string; category: string; logo?: string };
 
 export const techStack: TechTool[] = [
   // Tax Preparation
-  { name: "CCH Axcess Tax", category: "Tax Preparation", logo: "/assets/software/cch-axcess.png" },
-  { name: "UltraTax CS", category: "Tax Preparation", logo: "/assets/software/ultratax.png" },
-  { name: "ProConnect", category: "Tax Preparation", logo: "/assets/software/proconnect-or-advancedflow.png" },
-  { name: "Lacerte", category: "Tax Preparation", logo: "/assets/software/lacerte-new.png" },
-  { name: "ProSeries", category: "Tax Preparation" },
-  { name: "Drake", category: "Tax Preparation", logo: "/assets/software/drake.png" },
-  { name: "TaxAct", category: "Tax Preparation" },
+  { name: "CCH Axcess Tax", category: "Tax Preparation", logo: "/assets/software-logos/1-tax-preparation/cch-access-tax.png" },
+  { name: "CCH ProSystem fx Tax", category: "Tax Preparation", logo: "/assets/software-logos/1-tax-preparation/cch-prosystem-fx-tax.png" },
+  { name: "UltraTax CS", category: "Tax Preparation", logo: "/assets/software-logos/1-tax-preparation/ultra-tax-cs.png" },
+  { name: "Lacerte Tax", category: "Tax Preparation", logo: "/assets/software-logos/1-tax-preparation/lacerte-tax.png" },
+  { name: "ProConnect", category: "Tax Preparation", logo: "/assets/software-logos/1-tax-preparation/proconnect-lacerte.png" },
+  { name: "ProSeries Tax", category: "Tax Preparation", logo: "/assets/software-logos/1-tax-preparation/proseries-tax.png" },
+  { name: "Drake Tax", category: "Tax Preparation", logo: "/assets/software-logos/1-tax-preparation/drake-tax.png" },
+  { name: "TaxAct", category: "Tax Preparation", logo: "/assets/software-logos/1-tax-preparation/taxact.png" },
   // Workflow, CRM & Document Management
-  { name: "CCH Workflow", category: "Workflow, CRM & Document Management" },
-  { name: "Karbon", category: "Workflow, CRM & Document Management" },
-  { name: "Canopy", category: "Workflow, CRM & Document Management" },
-  { name: "TaxDome", category: "Workflow, CRM & Document Management" },
-  { name: "Monday.com", category: "Workflow, CRM & Document Management" },
-  { name: "Slack", category: "Workflow, CRM & Document Management" },
+  { name: "CCH Workflow", category: "Workflow, CRM & Document Management", logo: "/assets/software-logos/2-workflow-crm-document-management/cch-workflow.png" },
+  { name: "GoFileRoom", category: "Workflow, CRM & Document Management", logo: "/assets/software-logos/2-workflow-crm-document-management/gofileroom.png" },
+  { name: "Karbon", category: "Workflow, CRM & Document Management", logo: "/assets/software-logos/2-workflow-crm-document-management/karbon.png" },
+  { name: "Canopy", category: "Workflow, CRM & Document Management", logo: "/assets/software-logos/2-workflow-crm-document-management/canopy.png" },
+  { name: "TaxDome", category: "Workflow, CRM & Document Management", logo: "/assets/software-logos/2-workflow-crm-document-management/taxdone.png" },
+  { name: "Monday.com", category: "Workflow, CRM & Document Management", logo: "/assets/software-logos/2-workflow-crm-document-management/monday-com.png" },
+  { name: "Slack", category: "Workflow, CRM & Document Management", logo: "/assets/software-logos/2-workflow-crm-document-management/slack.png" },
+  { name: "Microsoft SharePoint", category: "Workflow, CRM & Document Management", logo: "/assets/software-logos/2-workflow-crm-document-management/microsoft-sharepoint.png" },
   // Bookkeeping & Accounting
-  { name: "QuickBooks Online", category: "Bookkeeping & Accounting", logo: "/assets/software/quickbooks.png" },
-  { name: "QuickBooks Desktop", category: "Bookkeeping & Accounting", logo: "/assets/software/quickbooks.png" },
-  { name: "Xero", category: "Bookkeeping & Accounting", logo: "/assets/software/xero.png" },
-  { name: "Wave", category: "Bookkeeping & Accounting" },
-  { name: "Zoho Books", category: "Bookkeeping & Accounting" },
-  { name: "Yardi", category: "Bookkeeping & Accounting" },
-  { name: "Rent Manager", category: "Bookkeeping & Accounting" },
+  { name: "QuickBooks Online", category: "Bookkeeping & Accounting", logo: "/assets/software-logos/3-bookkeeping-accounting/qb-online.png" },
+  { name: "QuickBooks Desktop", category: "Bookkeeping & Accounting", logo: "/assets/software-logos/3-bookkeeping-accounting/qb-desktop.png" },
+  { name: "Xero", category: "Bookkeeping & Accounting", logo: "/assets/software-logos/3-bookkeeping-accounting/xero.png" },
+  { name: "Sage", category: "Bookkeeping & Accounting", logo: "/assets/software-logos/3-bookkeeping-accounting/sage.png" },
+  { name: "NetSuite", category: "Bookkeeping & Accounting", logo: "/assets/software-logos/3-bookkeeping-accounting/netsuite.png" },
+  { name: "Zoho Books", category: "Bookkeeping & Accounting", logo: "/assets/software-logos/3-bookkeeping-accounting/zoho-books.png" },
+  { name: "Wave", category: "Bookkeeping & Accounting", logo: "/assets/software-logos/3-bookkeeping-accounting/wave.png" },
+  { name: "Dext", category: "Bookkeeping & Accounting", logo: "/assets/software-logos/3-bookkeeping-accounting/dext.png" },
+  { name: "Yardi", category: "Bookkeeping & Accounting", logo: "/assets/software-logos/3-bookkeeping-accounting/yardi.png" },
+  { name: "Rent Manager", category: "Bookkeeping & Accounting", logo: "/assets/software-logos/3-bookkeeping-accounting/rent-manger.png" },
+  { name: "AppFolio", category: "Bookkeeping & Accounting", logo: "/assets/software-logos/3-bookkeeping-accounting/appfolio.png" },
+  { name: "Buildium", category: "Bookkeeping & Accounting", logo: "/assets/software-logos/3-bookkeeping-accounting/buildium.png" },
   // Payroll & Payments
-  { name: "ADP", category: "Payroll & Payments" },
-  { name: "Gusto", category: "Payroll & Payments" },
-  { name: "Paychex", category: "Payroll & Payments" },
-  { name: "Bill.com", category: "Payroll & Payments" },
-  { name: "Stripe", category: "Payroll & Payments" },
-  { name: "PayPal", category: "Payroll & Payments" },
+  { name: "ADP", category: "Payroll & Payments", logo: "/assets/software-logos/4-payroll-payments/adp.png" },
+  { name: "Gusto", category: "Payroll & Payments", logo: "/assets/software-logos/4-payroll-payments/gusto.png" },
+  { name: "Paychex", category: "Payroll & Payments", logo: "/assets/software-logos/4-payroll-payments/paychex.png" },
+  { name: "Rippling", category: "Payroll & Payments", logo: "/assets/software-logos/4-payroll-payments/rippling.png" },
+  { name: "QuickBooks Payroll", category: "Payroll & Payments", logo: "/assets/software-logos/4-payroll-payments/qb-payroll.png" },
+  { name: "Bill.com", category: "Payroll & Payments", logo: "/assets/software-logos/4-payroll-payments/bill-com.png" },
+  { name: "Ramp", category: "Payroll & Payments", logo: "/assets/software-logos/4-payroll-payments/ramp.png" },
+  { name: "Expensify", category: "Payroll & Payments", logo: "/assets/software-logos/4-payroll-payments/expensify.png" },
+  { name: "Stripe", category: "Payroll & Payments", logo: "/assets/software-logos/4-payroll-payments/stripe.png" },
+  { name: "PayPal", category: "Payroll & Payments", logo: "/assets/software-logos/4-payroll-payments/paypal.png" },
   // Audit & Assurance
-  { name: "CaseWare", category: "Audit & Assurance" },
-  { name: "Caseware Cloud", category: "Audit & Assurance" },
-  // NOTE: logo assets exist only for the tools carrying a `logo` path above.
-  // Tools without one fall back to a wordmark tile until artwork is supplied.
+  { name: "CaseWare", category: "Audit & Assurance", logo: "/assets/software-logos/5-audit-assurance/caseware.png" },
+  { name: "CaseWare Cloud", category: "Audit & Assurance", logo: "/assets/software-logos/5-audit-assurance/caseware-cloud.png" },
+  { name: "CCH ProSystem fx Engagement", category: "Audit & Assurance", logo: "/assets/software-logos/5-audit-assurance/cch-prosystem-fx-engagement.png" },
+  { name: "Engagement Manager (AdvanceFlow)", category: "Audit & Assurance", logo: "/assets/software-logos/5-audit-assurance/engagement-manager-advance-flow.png" },
+  { name: "AuditFile", category: "Audit & Assurance", logo: "/assets/software-logos/5-audit-assurance/auditfile.png" },
+  { name: "Suralink", category: "Audit & Assurance", logo: "/assets/software-logos/5-audit-assurance/suralink.png" },
 ];
 
 /* ============================================================================
@@ -582,6 +641,5 @@ export const techStack: TechTool[] = [
  *      report/certificate exists (otherwise leave false = "aligned with")
  *  [ ] successStories[]: verify/replace every metric; permission before naming clients
  *  [ ] audit-specific capacity numbers (headcount, engagements, avg experience)
- *  [ ] audit working-paper software (CaseWare, etc.) to add to techStack
  *  [ ] additional audit-team member bios & photos for team[]
  * ==========================================================================*/

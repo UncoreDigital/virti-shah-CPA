@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Check, ArrowUpRight, ArrowRight, BookMarked } from "lucide-react";
 import PageBanner from "@/components/PageBanner";
 import Reveal from "@/components/Reveal";
+import ProfessionalResponsibility from "@/components/ProfessionalResponsibility";
 import { site } from "@/lib/site";
 import { auditServices, type AuditService } from "@/lib/firm-data";
 
@@ -72,6 +73,8 @@ export default function AuditServiceDetail({ data }: { data: AuditService }) {
                 </div>
               </div>
             </Reveal>
+
+            <ProfessionalResponsibility className="mt-10" />
           </div>
 
           {/* Sidebar */}

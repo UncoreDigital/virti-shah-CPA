@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin, Clock, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import { site } from "@/lib/site";
 
 /* Locked footer link groups, see the homepage copy document, Section 7. */
@@ -121,12 +121,6 @@ export default function Footer() {
                 >
                   {site.email}
                 </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <Clock className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                <span className="text-primary-foreground/80 font-inter text-sm">
-                  {site.hours}
-                </span>
               </li>
             </ul>
           </div>

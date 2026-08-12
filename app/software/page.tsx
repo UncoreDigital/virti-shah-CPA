@@ -60,18 +60,20 @@ export default function SoftwarePage() {
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
                   {group.tools.map((tool, i) => (
                     <Reveal key={tool.name} delay={(i % 4) * 0.05}>
-                      <div className="bg-card rounded-2xl shadow-elegant h-32 flex flex-col items-center justify-center gap-3 p-5 border border-transparent hover:border-gold/30 transition-colors">
+                      {/* Supplied logos are complete tiles (background, mark and
+                          wordmark), so they are shown bare: no card wrapper and
+                          no text label, which would otherwise double up. */}
+                      <div className="h-32 flex items-center justify-center overflow-hidden rounded-2xl transition-transform duration-300 hover:-translate-y-1">
                         {tool.logo ? (
                           <Image
                             src={tool.logo}
                             alt={tool.name}
-                            width={130}
-                            height={50}
-                            unoptimized
-                            className="max-h-12 w-auto object-contain"
+                            width={180}
+                            height={180}
+                            className="h-full w-full object-contain"
                           />
                         ) : (
-                          <span className="font-playfair text-xl font-semibold text-primary text-center">
+                          <span className="font-playfair text-xl font-semibold text-primary text-center px-4">
                             {tool.name}
                           </span>
                         )}

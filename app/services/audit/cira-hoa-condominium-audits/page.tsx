@@ -12,14 +12,9 @@ import Reveal from "@/components/Reveal";
 import { site } from "@/lib/site";
 import { cira } from "@/lib/cira";
 
-/**
- * Hidden pending service-line approval, noindex/nofollow, and nothing on the
- * site links here. See the publication note in lib/cira.ts before exposing it.
- */
 export const metadata: Metadata = {
   title: cira.seoTitle,
   description: cira.metaDescription,
-  robots: { index: false, follow: false },
 };
 
 export default function CiraAuditsPage() {
