@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { MapPin, Phone, Mail, Clock, Linkedin } from "lucide-react";
+import { MapPin, Phone, Mail, Linkedin } from "lucide-react";
 import PageBanner from "@/components/PageBanner";
 import Reveal from "@/components/Reveal";
 import ContactForm from "@/components/ContactForm";
@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Virti Shah CPA. Visit our Ahmedabad office, call +1 (646) 236-6829 or email info@virtishahcpa.com to book a trial.",
+    "Get in touch with Virti Shah CPA. Visit our Ahmedabad office, call +1 (646) 236-6829 or email info@virtishahcpa.com to schedule a capacity assessment.",
 };
 
 const details = [
@@ -30,11 +30,6 @@ const details = [
     label: "Email",
     value: site.email,
     href: site.emailHref,
-  },
-  {
-    icon: Clock,
-    label: "Working Hours",
-    value: site.hours,
   },
 ];
 

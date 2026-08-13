@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Check, ArrowUpRight, ArrowRight, BookMarked } from "lucide-react";
 import PageBanner from "@/components/PageBanner";
 import Reveal from "@/components/Reveal";
-import ProfessionalResponsibility from "@/components/ProfessionalResponsibility";
 import { site } from "@/lib/site";
 import { auditServices, type AuditService } from "@/lib/firm-data";
 
@@ -73,8 +72,6 @@ export default function AuditServiceDetail({ data }: { data: AuditService }) {
                 </div>
               </div>
             </Reveal>
-
-            <ProfessionalResponsibility className="mt-10" />
           </div>
 
           {/* Sidebar */}
@@ -89,8 +86,8 @@ export default function AuditServiceDetail({ data }: { data: AuditService }) {
                     Add dedicated {data.title.toLowerCase()} capacity without
                     partner overhead.
                   </p>
-                  <Link href="/contact" className="btn-gold w-full justify-center">
-                    Book a Trial
+                  <Link href="/contact" className="btn-gold w-full justify-center text-sm">
+                    {site.primaryCta}
                     <ArrowUpRight className="w-4 h-4" />
                   </Link>
                   <a

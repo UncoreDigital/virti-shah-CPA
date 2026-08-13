@@ -117,18 +117,10 @@ export type AuditService = {
   ownPage?: boolean;
 };
 
-/**
- * Required by the Audit & Assurance developer checklist: this statement must
- * appear on the Audit hub AND every internal audit page. Wording matches the
- * approved CIRA page copy. Do not remove from any audit page.
- */
-export const professionalResponsibility = {
-  heading: "Professional Responsibility",
-  paragraphs: [
-    "Our firm performs assigned preparation, testing documentation, financial statement and completion tasks within the client CPA firm's methodology and review process.",
-    "The client CPA firm remains responsible for engagement acceptance and continuance, independence, planning decisions, risk assessment, materiality, professional judgments, supervision and review, client communications, evaluation of evidence, conclusions, report issuance and final sign-off.",
-  ],
-};
+/* The Professional Responsibility block that the 13-08 audit checklist required
+   on every audit page was removed again on 13-08 (later instruction: "remove
+   from everywhere ... main audit page and all sub head like CIRA, Nonprofit").
+   Do not reinstate without a newer written instruction. */
 
 export const auditServices: AuditService[] = [
   {

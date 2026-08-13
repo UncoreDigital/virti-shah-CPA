@@ -9,6 +9,7 @@ const SERVICES = [
   "Tax Preparation",
   "Independent Tax Review",
   "Bookkeeping & CAS",
+  "AI Implementation",
   "Other",
 ];
 

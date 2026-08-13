@@ -128,13 +128,13 @@ export default function ServiceDetail({
               <Reveal delay={0.1}>
                 <div className="bg-gradient-navy rounded-2xl p-7 text-center">
                   <h3 className="font-playfair text-xl font-semibold text-primary-foreground mb-2">
-                    Ready to get started?
+                    Ready to add capacity?
                   </h3>
                   <p className="font-inter text-sm text-primary-foreground/85 mb-5">
-                    Book a trial and see the VSCPA difference.
+                    Tell us the scope, timing and software involved.
                   </p>
-                  <Link href="/contact" className="btn-gold w-full justify-center">
-                    Book a Trial
+                  <Link href="/contact" className="btn-gold w-full justify-center text-sm">
+                    {site.primaryCta}
                     <ArrowUpRight className="w-4 h-4" />
                   </Link>
                   <a

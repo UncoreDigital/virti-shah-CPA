@@ -44,6 +44,7 @@ export const cira = {
     "Where separately included in the engagement scope, our tax team can prepare Form 1120-H or Form 1120 workpapers and draft returns based on the available records and tax positions approved by the client CPA firm. The client CPA firm retains responsibility for tax positions, final review, client communication, signing and filing.",
   ],
 
+  /* Removed from the page on 13-08 instruction; kept here for reference only. */
   responsibilityHeading: "Professional Responsibility",
   responsibilityParagraphs: [
     "Our firm performs assigned preparation, testing documentation, financial statement and completion tasks within the client CPA firm's methodology and review process.",

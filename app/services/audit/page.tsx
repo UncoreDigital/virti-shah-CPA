@@ -5,7 +5,6 @@ import PageBanner from "@/components/PageBanner";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import CTA from "@/components/sections/CTA";
-import ProfessionalResponsibility from "@/components/ProfessionalResponsibility";
 import { auditServices, positioning, capacityStats } from "@/lib/firm-data";
 
 export const metadata: Metadata = {
@@ -135,12 +134,6 @@ export default function AuditHubPage() {
             See our full capacity story
             <ArrowUpRight className="w-4 h-4" />
           </Link>
-        </div>
-      </section>
-
-      <section className="section-padding pb-0">
-        <div className="container-wide">
-          <ProfessionalResponsibility />
         </div>
       </section>
 

@@ -2,13 +2,18 @@
  *  GALLERY / LIFE AT VSCPA.
  *
  *  Heading structure per the approved reference image
- *  ("ChatGPT Image Aug 11, 2026, 08_48_12 PM.png", docs/change-req-11-08).
+ *  ("ChatGPT Image Aug 11, 2026, 08_48_12 PM.png").
  *  Photos are the firm's own, downscaled to 1600px / quality 82 for the web.
  *
- *  COUNT MATTERS: the grid runs 2 / 3 / 4 columns, so the photo count is kept
- *  divisible by all three (24) to leave no empty blocks on the last row. Per
- *  the 13-08 instruction, photos may be added or removed to keep that true.
- *  If you add photos, go to 30 or 36 rather than stopping at an awkward number.
+ *  When adding a batch, de-duplicate by image content rather than filename:
+ *  the supplied folders overlap and re-export the same shots under different
+ *  names. The photo flagged for removal on 13-08 also appears in the
+ *  "additional images" folder, so it must be excluded on any future merge.
+ *
+ *  The grid is a justified (flex) layout: rows share a fixed height and the
+ *  final row's tiles grow to fill the width. That means ANY number of photos
+ *  leaves no empty blocks, so photos can be added or removed freely without
+ *  having to land on a count divisible by the column count.
  * ------------------------------------------------------------------------- */
 
 export const gallery = {
@@ -24,7 +29,7 @@ export const gallery = {
   altPrefix: "Virti Shah CPA team",
 
   photos: Array.from(
-    { length: 24 },
+    { length: 55 },
     (_, i) => `/assets/gallery/gallery-${String(i + 1).padStart(2, "0")}.jpg`
   ),
 };

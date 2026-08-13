@@ -104,24 +104,6 @@ export default function CiraAuditsPage() {
               </div>
             </Reveal>
 
-            {/* Professional responsibility */}
-            <Reveal>
-              <div className="bg-muted rounded-2xl p-7 border-l-4 border-gold">
-                <h2 className="font-playfair text-2xl font-bold text-primary mb-5">
-                  {cira.responsibilityHeading}
-                </h2>
-                <div className="space-y-4">
-                  {cira.responsibilityParagraphs.map((p) => (
-                    <p
-                      key={p}
-                      className="font-inter text-sm text-slate leading-relaxed"
-                    >
-                      {p}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            </Reveal>
           </div>
 
           {/* Sidebar */}
